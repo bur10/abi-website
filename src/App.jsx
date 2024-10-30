@@ -7,12 +7,14 @@ import ReferencesSection from './components/ReferencesSection';
 import AboutUsSection from './components/AboutUsSection';
 import Footer from './components/Footer';
 import StickyButton from './components/StickyButton';
+import Subheader from './components/Subheader';
 
 
 const App = () => {
   return (
     <div className="min-h-screen bg-white">
       <StickyButton />
+      <Subheader />
       <Navbar />
       <main className='pt-20'>
         <section id="home">

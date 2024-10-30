@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import Subheader from './Subheader';
 
 export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +20,8 @@ export const Navbar = () => {
     }, []);
 
     return (
-        <nav className={`fixed top-0 left-0 right-0 bg-white shadow-lg z-50 transition-all duration-300 ${isScrolled ? 'h-16' : 'h-36'}`}>
+        <nav className={`fixed top-0 left-0 right-0 bg-white shadow-lg z-50 transition-all duration-300 ${isScrolled ? 'h-24' : 'h-40'}`}>
+            <Subheader />
             <div className="max-w-7xl mx-auto px-4">
                 <div className={`flex justify-between items-center h-full transition-all duration-300`}>
                     {/* Company Name - Left */}
