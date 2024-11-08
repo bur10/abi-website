@@ -66,7 +66,7 @@ const ServicesSection = () => {
                         Hizmetlerimiz
                     </h2>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        We offer a comprehensive range of services to help your business grow and succeed in the digital world.
+                        İşletmenizin ihtiyaçlarına yönelik kapsamlı çözümler sunuyoruz.
                     </p>
                 </div>
 

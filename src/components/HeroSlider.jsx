@@ -14,13 +14,13 @@ export const HeroSlider = () => {
             buttonText: "Learn More"
         },
         {
-            image: "/api/placeholder/1920/1080",
+            image: "/images/slider2.jpg",
             title: "Quality Services",
             description: "Delivering excellence in everything we do",
             buttonText: "Our Services"
         },
         {
-            image: "/api/placeholder/1920/1080",
+            image: "/images/slider3.jpg",
             title: "Expert Team",
             description: "Professional solutions for your needs",
             buttonText: "Meet Us"
