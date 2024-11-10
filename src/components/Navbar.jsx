@@ -34,7 +34,7 @@ export const Navbar = () => {
                         <div className={`relative transition-all duration-300 ${isScrolled ? 'w-16 h-16' : 'w-36 h-36'}`}>
                             <a href="#home">
                                 <img
-                                    src="/images/aden-logo.png"
+                                    src="./images/aden-logo.png"
                                     alt="Company Logo"
                                     className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all duration-300`}
                                 />

@@ -38,25 +38,25 @@ const ServicesSection = () => {
     const services = [
         {
             id: 1,
-            image: "/images/temizlik-hizmetleri.jpg",
+            image: "./images/temizlik-hizmetleri.jpg",
             title: "Temizlik Hizmetleri",
             description: "Yaşam alanlarınızda hijyen standartlarına uygun, kapsamlı temizlik çözümleri sunarak sağlıklı ve düzenli bir ortam sağlıyoruz."
         },
         {
             id: 2,
-            image: "/images/peyzaj-hizmetleri.jpg",
+            image: "./images/peyzaj-hizmetleri.jpg",
             title: "Peyzaj Bakım Hizmetleri",
             description: "Peyzaj düzenleme ve bitki bakımı hizmetlerimizle, dış mekanlarınıza estetik ve bakımlı bir görünüm kazandırıyoruz."
         },
         {
             id: 3,
-            image: "/images/havuz-hizmetleri.jpg",
+            image: "./images/havuz-hizmetleri.jpg",
             title: "Havuz Bakım Hizmetleri",
             description: "Havuzlarınızın temiz, güvenli ve her daim kullanıma hazır olması için profesyonel bakım ve su kalitesi kontrol hizmetleri sunuyoruz."
         },
         {
             id: 4,
-            image: "/images/site-apartman-hizmetleri.jpg",
+            image: "./images/site-apartman-hizmetleri.jpg",
             title: "Site Apartman ve Tesis Yönetimi",
             description: "Site, apartman ve tesis yönetiminde; mali, idari ve teknik süreçleri kapsayan bütüncül çözümlerle güvenli, konforlu yaşam alanları oluşturuyoruz."
         }
