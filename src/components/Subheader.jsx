@@ -27,9 +27,10 @@ const Subheader = () => {
                             href="https://instagram.com/adengruptr"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="hover:text-gray-300 transition-colors"
+                            className="hover:text-gray-300 transition-colors flex items-center gap-1"
                         >
                             <Instagram className="w-4 h-4" />
+                            <span>adengruptr</span>
                         </a>
                     </div>
                 </div>

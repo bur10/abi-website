@@ -8,49 +8,24 @@ const AboutUsSection = () => {
             <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Hakkımızda</h2>
                 <p className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
-                    Hikayemizi, misyonumuzu ve üstün hizmet sunma konusundaki kararlılığımızı keşfedin.
+                    Hikayemizi ve üstün hizmet sunma konusundaki kararlılığımızı keşfedin.
                 </p>
             </div>
 
             {/* Two-Column Layout */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 {/* Left Column - Text Content */}
-                <div className="flex flex-col justify-center space-y-4">
+                <div className="flex flex-col justify-start space-y-4">
                     <h3 className="text-2xl font-semibold text-gray-800">
                         Biz kimiz?
                     </h3>
                     <p className="text-gray-600 leading-relaxed">
-                        Our company has been a leader in the industry for over a decade, delivering innovative solutions
-                        that cater to our clients' unique needs. We strive to maintain the highest standards of quality and
-                        ensure customer satisfaction in every project we undertake.
+                        Aden Grup, 2021 yılında İzmir’de kurulmuş, site yönetimi alanında uzmanlaşmış bir firmadır. Müşterilerine sunduğu kapsamlı hizmetlerle, peyzaj düzenleme, temizlik ve havuz bakımı gibi birçok alanda yüksek kalite ve titizlikle çözümler üretmektedir. Amacımız, yaşam alanlarınızı daha düzenli, temiz ve sağlıklı hale getirirken, sizlere güvenilir ve sürdürülebilir bir yönetim deneyimi sunmaktır.
+
                     </p>
                     <p className="text-gray-600 leading-relaxed">
-                        Our team consists of passionate and experienced professionals dedicated to pushing boundaries and
-                        creating value through our services.
-                    </p>
-                    <h2 className="text-2xl font-semibold text-gray-800">
-                        Vizyonumuz
-                    </h2>
-                    <p className="text-gray-600 leading-relaxed">
-                        Our company has been a leader in the industry for over a decade, delivering innovative solutions
-                        that cater to our clients' unique needs. We strive to maintain the highest standards of quality and
-                        ensure customer satisfaction in every project we undertake.
-                    </p>
-                    <p className="text-gray-600 leading-relaxed">
-                        Our team consists of passionate and experienced professionals dedicated to pushing boundaries and
-                        creating value through our services.
-                    </p>
-                    <h2 className="text-2xl font-semibold text-gray-800">
-                        Misyonumuz
-                    </h2>
-                    <p className="text-gray-600 leading-relaxed">
-                        Our company has been a leader in the industry for over a decade, delivering innovative solutions
-                        that cater to our clients' unique needs. We strive to maintain the highest standards of quality and
-                        ensure customer satisfaction in every project we undertake.
-                    </p>
-                    <p className="text-gray-600 leading-relaxed">
-                        Our team consists of passionate and experienced professionals dedicated to pushing boundaries and
-                        creating value through our services.
+                        Deneyimli kadromuz, her projede ihtiyaçlarınıza özel yaklaşımlar geliştirerek müşteri memnuniyetini ön planda tutar. Hizmet verdiğimiz alanlarda sektörün en iyi uygulamalarını ve en güncel teknolojilerini kullanarak, güvenilir bir yönetim anlayışı ile fark yaratmayı hedeflemekteyiz. Her bir projede kalıcı çözümler üreterek, sizlere uzun vadeli bir hizmet deneyimi sunuyoruz. Aden Grup olarak, müşteri odaklı yaklaşımımız ve kaliteli hizmet anlayışımız ile sektörümüzde öne çıkmaya devam ediyoruz.
+
                     </p>
                 </div>
 

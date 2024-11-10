@@ -16,7 +16,7 @@ const Footer = () => {
                         <div className="space-y-3">
                             <div className="flex items-center space-x-3">
                                 <i className="fa-solid fa-location-dot text-blue-400"></i>
-                                <p className="text-gray-300">Cumhuriyet Mahallesi 2005 Sokak No: 1/2 İç Kapı No: 25</p>
+                                <p className="text-gray-300">Cumhuriyet Mahallesi 2005 Sokak No: 1/2 İç Kapı No: 25 Torbalı/ İzmir</p>
                             </div>
 
                             <div className="flex items-center space-x-3">

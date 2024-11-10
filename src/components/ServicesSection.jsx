@@ -19,9 +19,14 @@ const ServiceCard = ({ image, title, description }) => {
                 <p className="text-gray-600 flex-grow">{description}</p>
 
                 {/* Learn More Button */}
-                <button className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-300">
-                    Learn More
-                </button>
+                <a
+                    href='https://wa.me/905324590096'
+                    className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-300 inline-block text-center"
+                    target="_blank"  // Opens in new tab
+                    rel="noopener noreferrer"  // Security best practice for external links
+                >
+                    Detaylı Bilgi
+                </a>
             </div>
         </div>
     );
@@ -35,25 +40,25 @@ const ServicesSection = () => {
             id: 1,
             image: "/images/temizlik-hizmetleri.jpg",
             title: "Temizlik Hizmetleri",
-            description: "Custom web solutions tailored to your business needs. We create responsive, user-friendly websites that drive results."
+            description: "Yaşam alanlarınızda hijyen standartlarına uygun, kapsamlı temizlik çözümleri sunarak sağlıklı ve düzenli bir ortam sağlıyoruz."
         },
         {
             id: 2,
             image: "/images/peyzaj-hizmetleri.jpg",
             title: "Peyzaj Bakım Hizmetleri",
-            description: "Strategic digital marketing campaigns that increase your online presence and drive customer engagement."
+            description: "Peyzaj düzenleme ve bitki bakımı hizmetlerimizle, dış mekanlarınıza estetik ve bakımlı bir görünüm kazandırıyoruz."
         },
         {
             id: 3,
             image: "/images/havuz-hizmetleri.jpg",
             title: "Havuz Bakım Hizmetleri",
-            description: "User-centered design solutions that create seamless and engaging experiences for your customers."
+            description: "Havuzlarınızın temiz, güvenli ve her daim kullanıma hazır olması için profesyonel bakım ve su kalitesi kontrol hizmetleri sunuyoruz."
         },
         {
             id: 4,
             image: "/images/site-apartman-hizmetleri.jpg",
             title: "Site Apartman ve Tesis Yönetimi",
-            description: "Native and cross-platform mobile applications that keep your business accessible on any device."
+            description: "Site, apartman ve tesis yönetiminde; mali, idari ve teknik süreçleri kapsayan bütüncül çözümlerle güvenli, konforlu yaşam alanları oluşturuyoruz."
         }
     ];
 

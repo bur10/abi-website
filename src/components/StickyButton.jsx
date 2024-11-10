@@ -5,7 +5,7 @@ const StickyButton = () => {
     return (
         <a
             target='_blank'
-            href="https://web.whatsapp.com/send?phone=+905324590096"
+            href="https://wa.me/905324590096"
             className="fixed bottom-4 right-4 bg-green-500 text-white py-2 px-4 rounded-full flex items-center shadow-lg hover:bg-green-600 transition duration-300"
             style={{ zIndex: 1000 }}
             rel="noopener noreferrer"
