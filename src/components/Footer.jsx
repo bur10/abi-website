@@ -9,6 +9,7 @@ const Footer = () => {
                     <div className="border-gray-700 border-b md:border-r md:border-b-0 ">
                         <h2 className="text-2xl font-bold mb-4">Bizimle İletişime Geçin</h2>
                         <p className="text-gray-300 mb-6">Sizlerle iletişimde olmaktan mutluluk duyarız! Bize her zaman ulaşabilirsiniz.</p>
+                        <p className="text-gray-300 mb-6">© 2024 Aden Grup. Tüm hakları saklıdır.</p>
                     </div>
 
                     {/* Right Column - Contact Links */}
