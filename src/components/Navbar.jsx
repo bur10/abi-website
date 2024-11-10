@@ -69,10 +69,10 @@ export const Navbar = () => {
             {/* Mobile Menu */}
             <div className={`md:hidden ${isOpen ? 'block' : 'hidden'}`}>
                 <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
-                    <a href="#home" className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md">Home</a>
-                    <a href="#about" className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md">About</a>
-                    <a href="#services" className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md">Services</a>
-                    <a href="#contact" className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md">Contact</a>
+                    <a href="#services" className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md">Hizmetler</a>
+                    <a href="#references" className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md">Referanslar</a>
+                    <a href="#aboutus" className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md">Hakkımızda</a>
+                    <a href="#contact" className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md">İletişim</a>
                 </div>
             </div>
         </nav>
