@@ -53,7 +53,7 @@ const AboutUsSection = () => {
                                 loop
                                 controls
                                 className="absolute top-0 left-0 w-full h-full object-cover"
-                                src="/videos/aden.mp4"
+                                src="./videos/aden.mp4"
                             />
                         </div>
 
