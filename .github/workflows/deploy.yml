@@ -20,7 +20,7 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        uses: bahmutov/npm-install@v2  # Updated to v2
+        uses: bahmutov/npm-install@v1  # Use v1 as v2 is not available
 
       - name: Build project
         run: npm run build
