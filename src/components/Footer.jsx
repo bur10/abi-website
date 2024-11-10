@@ -6,7 +6,7 @@ const Footer = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                     {/* Left Column - Title and Description */}
-                    <div className="border-r border-gray-700">
+                    <div className="border-gray-700 border-b md:border-r md:border-b-0 ">
                         <h2 className="text-2xl font-bold mb-4">Bizimle İletişime Geçin</h2>
                         <p className="text-gray-300 mb-6">Sizlerle iletişimde olmaktan mutluluk duyarız! Bize her zaman ulaşabilirsiniz.</p>
                     </div>

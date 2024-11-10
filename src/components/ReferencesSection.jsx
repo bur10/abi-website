@@ -74,9 +74,9 @@ const ReferencesSection = () => {
         { id: 8, image: "./images/references/krv_insaat.png", title: "KRV İnşaat" },
         { id: 9, image: "./images/references/ertok_insaat.png", title: "Ertok İnşaat" },
         { id: 10, image: "./images/references/mimkent_vista.png", title: "Mimkent Vista" },
-        { id: 11, image: "./images/references/ozkon_insaat.png", title: "Özkon İnşaat" },
-        { id: 11, image: "./images/references/dasif_insaat.jpg", title: "Dasif İnşaat" },
-        { id: 11, image: "./images/references/bakan_insaat.jpg", title: "Bakan Gayrimenkul" },
+        { id: 12, image: "./images/references/ozkon_insaat.png", title: "Özkon İnşaat" },
+        { id: 13, image: "./images/references/dasif_insaat.jpg", title: "Dasif İnşaat" },
+        { id: 14, image: "./images/references/bakan_insaat.jpg", title: "Bakan Gayrimenkul" },
     ];
 
     return (
