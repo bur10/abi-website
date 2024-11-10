@@ -20,12 +20,12 @@ export const Navbar = () => {
     }, []);
 
     return (
-        <nav className={`fixed top-0 left-0 right-0 bg-white shadow-lg z-50 transition-all duration-300 ${isScrolled ? 'h-36' : 'h-46'} md:${isScrolled ? 'h-24' : 'h-40'}  `}>
+        <nav className={`fixed top-0 left-0 right-0 bg-white shadow-lg z-50 transition-all duration-300 ${isScrolled ? 'h-34 md:h-24' : 'h-46 md:h-40'} `}>
             <Subheader />
             <div className="max-w-7xl mx-auto px-4">
                 <div className={`flex justify-between items-center h-full transition-all duration-300`}>
                     <div className="flex-shrink-0 flex items-center w-1/3">
-                        <h1 className={`font-bold text-gray-800 transition-all duration-300 ${isScrolled ? 'text-lg' : 'text-xl'}`}>
+                        <h1 className={`font-bold text-gray-800 transition-all duration-300 ${isScrolled ? 'text-sm md:text-lg' : 'text-base md:text-xl'}`}>
                             Aden Yönetim ve Temizlik Hizmetleri
                         </h1>
                     </div>
