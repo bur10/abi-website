@@ -43,7 +43,7 @@ export const Navbar = () => {
                     </div>
 
                     {/* Desktop Navigation - Right */}
-                    <div className="hidden md:flex items-center justify-end w-1/3 space-x-4">
+                    <div className="hidden lg:flex items-center justify-end w-1/3 space-x-4">
                         <a href="#services" className={`text-gray-600 hover:text-gray-900 px-3 py-2 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-base'}`}>Hizmetler</a>
                         <a href="#references" className={`text-gray-600 hover:text-gray-900 px-3 py-2 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-base'}`}>Referanslar</a>
                         <a href="#aboutus" className={`text-gray-600 hover:text-gray-900 px-3 py-2 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-base'}`}>Hakkımızda</a>
@@ -51,7 +51,7 @@ export const Navbar = () => {
                     </div>
 
                     {/* Mobile Menu Button */}
-                    <div className="md:hidden flex items-center w-1/3 justify-end">
+                    <div className="lg:hidden flex items-center w-1/3 justify-end">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
                             className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
