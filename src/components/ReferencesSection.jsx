@@ -66,17 +66,18 @@ const ReferencesSection = () => {
     const references = [
         { id: 1, image: "./images/references/galetos.png", title: "Galetos" },
         { id: 2, image: "./images/references/oasis-marina.jpg", title: "OASİS Marina" },
-        { id: 3, image: "./images/references/omeroglu-baharat.png", title: "Ömeroğlu Baharat" },
-        { id: 4, image: "./images/references/mia-koru.png", title: "Mia Koru" },
-        { id: 5, image: "./images/references/viven.jpg", title: "Viven İnşaat" },
-        { id: 6, image: "./images/references/last_point_city.jpg", title: "Last Point City" },
-        { id: 7, image: "./images/references/alacati_muhallebicisi.jpeg", title: "Alaçatı Muhallebicisi" },
-        { id: 8, image: "./images/references/krv_insaat.png", title: "KRV İnşaat" },
-        { id: 9, image: "./images/references/ertok_insaat.png", title: "Ertok İnşaat" },
-        { id: 10, image: "./images/references/mimkent_vista.png", title: "Mimkent Vista" },
+        { id: 3, image: "./images/references/bakan_insaat.jpg", title: "Bakan Gayrimenkul" },
+        { id: 4, image: "./images/references/omeroglu-baharat.png", title: "Ömeroğlu Baharat" },
+        { id: 5, image: "./images/references/mia-koru.png", title: "Mia Koru" },
+        { id: 6, image: "./images/references/viven.jpg", title: "Viven İnşaat" },
+        { id: 7, image: "./images/references/last_point_city.jpg", title: "Last Point City" },
+        { id: 8, image: "./images/references/alacati_muhallebicisi.jpeg", title: "Alaçatı Muhallebicisi" },
+        { id: 9, image: "./images/references/krv_insaat.png", title: "KRV İnşaat" },
+        { id: 10, image: "./images/references/ertok_insaat.png", title: "Ertok İnşaat" },
+        { id: 11, image: "./images/references/mimkent_vista.png", title: "Mimkent Vista" },
         { id: 12, image: "./images/references/ozkon_insaat.png", title: "Özkon İnşaat" },
         { id: 13, image: "./images/references/dasif_insaat.jpg", title: "Dasif İnşaat" },
-        { id: 14, image: "./images/references/bakan_insaat.jpg", title: "Bakan Gayrimenkul" },
+        { id: 14, image: "./images/references/pizza_locale.jpg", title: "Pizza Locale" },
     ];
 
     return (
