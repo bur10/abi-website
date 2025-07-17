@@ -1,4 +1,5 @@
 import React from 'react';
+import { COMPANY_INFO } from '../constants';
 
 const Footer = () => {
     return (
@@ -9,7 +10,7 @@ const Footer = () => {
                     <div className="border-gray-700 border-b md:border-r md:border-b-0 ">
                         <h2 className="text-2xl font-bold mb-4">Bizimle İletişime Geçin</h2>
                         <p className="text-gray-300 mb-6">Sizlerle iletişimde olmaktan mutluluk duyarız! Bize her zaman ulaşabilirsiniz.</p>
-                        <p className="text-gray-300 mb-6">© 2024 Aden Grup. Tüm hakları saklıdır.</p>
+                        <p className="text-gray-300 mb-6">© 2024 {COMPANY_INFO.shortName}. Tüm hakları saklıdır.</p>
                     </div>
 
                     {/* Right Column - Contact Links */}
@@ -17,29 +18,29 @@ const Footer = () => {
                         <div className="space-y-3">
                             <div className="flex items-center space-x-3">
                                 <i className="fa-solid fa-location-dot text-blue-400"></i>
-                                <p className="text-gray-300">Cumhuriyet Mahallesi 2005 Sokak No: 1/2 İç Kapı No: 25 Torbalı/ İzmir</p>
+                                <p className="text-gray-300">{COMPANY_INFO.address}</p>
                             </div>
 
                             <div className="flex items-center space-x-3">
                                 <i className="fa-solid fa-phone text-blue-400"></i>
-                                <p className="text-gray-300"><a href="tel:+905324590096">+90 (532) 459 00 96</a></p>
+                                <p className="text-gray-300"><a href={`tel:+${COMPANY_INFO.whatsapp}`}>{COMPANY_INFO.phone}</a></p>
                             </div>
 
                             <div className="flex items-center space-x-3">
                                 <i className="fa-solid fa-envelope text-blue-400"></i>
-                                <p className="text-gray-300"><a href="mailto:info@adengruptr.com">info@adengruptr.com</a></p>
+                                <p className="text-gray-300"><a href={`mailto:${COMPANY_INFO.email}`}>{COMPANY_INFO.email}</a></p>
                             </div>
 
                             <div className="flex items-center space-x-3">
                                 <i className="fab fa-instagram text-blue-400"></i>
                                 <p className="text-gray-300">
                                     <a
-                                        href="https://www.instagram.com/adengruptr/"
+                                        href={COMPANY_INFO.instagram}
                                         target='_blank'
                                         rel='noopener noreferrer'
                                         aria-label="Instagram"
                                     >
-                                        adengruptr
+                                        {COMPANY_INFO.instagramUsername}
                                     </a>
                                 </p>
                             </div>

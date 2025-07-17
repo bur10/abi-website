@@ -1,5 +1,6 @@
 import React from 'react';
 import { Heart, MessageCircle, Share } from 'lucide-react';
+import { COMPANY_INFO } from '../constants';
 
 const AboutUsSection = () => {
     return (
@@ -20,11 +21,11 @@ const AboutUsSection = () => {
                         Biz kimiz?
                     </h3>
                     <p className="text-gray-600 leading-relaxed">
-                        Aden Grup, 2021 yılında İzmir’de kurulmuş, site yönetimi alanında uzmanlaşmış bir firmadır. Müşterilerine sunduğu kapsamlı hizmetlerle, peyzaj düzenleme, temizlik ve havuz bakımı gibi birçok alanda yüksek kalite ve titizlikle çözümler üretmektedir. Amacımız, yaşam alanlarınızı daha düzenli, temiz ve sağlıklı hale getirirken, sizlere güvenilir ve sürdürülebilir bir yönetim deneyimi sunmaktır.
+                        {COMPANY_INFO.shortName}, {COMPANY_INFO.foundedYear} yılında {COMPANY_INFO.city}'de kurulmuş, site yönetimi alanında uzmanlaşmış bir firmadır. Müşterilerine sunduğu kapsamlı hizmetlerle, peyzaj düzenleme, temizlik ve havuz bakımı gibi birçok alanda yüksek kalite ve titizlikle çözümler üretmektedir. Amacımız, yaşam alanlarınızı daha düzenli, temiz ve sağlıklı hale getirirken, sizlere güvenilir ve sürdürülebilir bir yönetim deneyimi sunmaktır.
 
                     </p>
                     <p className="text-gray-600 leading-relaxed">
-                        Deneyimli kadromuz, her projede ihtiyaçlarınıza özel yaklaşımlar geliştirerek müşteri memnuniyetini ön planda tutar. Hizmet verdiğimiz alanlarda sektörün en iyi uygulamalarını ve en güncel teknolojilerini kullanarak, güvenilir bir yönetim anlayışı ile fark yaratmayı hedeflemekteyiz. Her bir projede kalıcı çözümler üreterek, sizlere uzun vadeli bir hizmet deneyimi sunuyoruz. Aden Grup olarak, müşteri odaklı yaklaşımımız ve kaliteli hizmet anlayışımız ile sektörümüzde öne çıkmaya devam ediyoruz.
+                        Deneyimli kadromuz, her projede ihtiyaçlarınıza özel yaklaşımlar geliştirerek müşteri memnuniyetini ön planda tutar. Hizmet verdiğimiz alanlarda sektörün en iyi uygulamalarını ve en güncel teknolojilerini kullanarak, güvenilir bir yönetim anlayışı ile fark yaratmayı hedeflemekteyiz. Her bir projede kalıcı çözümler üreterek, sizlere uzun vadeli bir hizmet deneyimi sunuyoruz. {COMPANY_INFO.shortName} olarak, müşteri odaklı yaklaşımımız ve kaliteli hizmet anlayışımız ile sektörümüzde öne çıkmaya devam ediyoruz.
 
                     </p>
                 </div>
@@ -40,7 +41,7 @@ const AboutUsSection = () => {
                                 </div>
                             </div>
                             <div className="ml-3">
-                                <p className="text-sm font-semibold text-gray-900"><a href="https://www.instagram.com/adengruptr/" target="_blank" rel="noopener noreferrer">adengruptr</a></p>
+                                <p className="text-sm font-semibold text-gray-900"><a href={COMPANY_INFO.instagram} target="_blank" rel="noopener noreferrer">{COMPANY_INFO.instagramUsername}</a></p>
                                 <p className="text-xs text-gray-500">Original Audio</p>
                             </div>
                         </div>
@@ -67,7 +68,7 @@ const AboutUsSection = () => {
                             <div className="mt-2">
                                 <p className="text-sm font-semibold text-gray-900">1,234 likes</p>
                                 <p className="text-sm text-gray-600 mt-1">
-                                    <span className="font-semibold">Aden Yönetim ve Temizlik Hizmetleri</span> Hizmetlerimizden haberdar kalın! 🎉
+                                    <span className="font-semibold">{COMPANY_INFO.name}</span> Hizmetlerimizden haberdar kalın! 🎉
                                 </p>
                             </div>
                         </div>

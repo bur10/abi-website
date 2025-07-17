@@ -3,6 +3,7 @@ import './App.css'
 import { Navbar } from './components/Navbar';
 import { HeroSlider } from './components/HeroSlider';
 import ServicesSection from './components/ServicesSection';
+import ServiceAreasSection from './components/ServiceAreasSection';
 import ReferencesSection from './components/ReferencesSection';
 import AboutUsSection from './components/AboutUsSection';
 import Footer from './components/Footer';
@@ -16,12 +17,15 @@ const App = () => {
       <StickyButton />
       <Subheader />
       <Navbar />
-      <main className='pt-20'>
+      <main className='pt-32'>
         <section id="home">
           <HeroSlider />
         </section>
         <section id="services">
           <ServicesSection />
+        </section>
+        <section id="service-areas">
+          <ServiceAreasSection />
         </section>
         <section id="references">
           <ReferencesSection />

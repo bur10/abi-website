@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { ChevronDown, ChevronUp, X, ArrowLeft } from 'lucide-react';
+import { SERVICE_CATEGORIES, createWhatsAppLink } from '../constants';
 
 // Individual Service Item Component for subtitles
 const ServiceItem = ({ title, description, index }) => {
@@ -13,7 +15,7 @@ const ServiceItem = ({ title, description, index }) => {
                     <h4 className="text-xl font-semibold text-gray-800 mb-3">{title}</h4>
                     <p className="text-gray-600 leading-relaxed flex-grow mb-4">{description}</p>
                     <a
-                        href={`https://wa.me/905324590096?text=${encodeURIComponent(`${title} Hizmeti hakkında bilgi almak istiyorum`)}`}
+                        href={createWhatsAppLink(`${title} Hizmeti hakkında bilgi almak istiyorum`)}
                         className="inline-block px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-300 text-sm font-medium self-start"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -24,6 +26,13 @@ const ServiceItem = ({ title, description, index }) => {
             </div>
         </div>
     );
+};
+
+// PropTypes for ServiceItem
+ServiceItem.propTypes = {
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    index: PropTypes.number.isRequired
 };
 
 // Expanded Service View Component
@@ -77,7 +86,7 @@ const ExpandedServiceView = ({ category, onClose }) => {
                         Uzman ekibimiz size özel çözümler sunmak için hazır.
                     </p>
                     <a
-                        href={`https://wa.me/905324590096?text=${encodeURIComponent(`${category.title} hakkında detaylı bilgi almak istiyorum`)}`}
+                        href={createWhatsAppLink(`${category.title} hakkında detaylı bilgi almak istiyorum`)}
                         className="px-8 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-300 inline-block font-medium"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -88,6 +97,21 @@ const ExpandedServiceView = ({ category, onClose }) => {
             </div>
         </div>
     );
+};
+
+// PropTypes for ExpandedServiceView
+ExpandedServiceView.propTypes = {
+    category: PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        title: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        image: PropTypes.string.isRequired,
+        services: PropTypes.arrayOf(PropTypes.shape({
+            title: PropTypes.string.isRequired,
+            description: PropTypes.string.isRequired
+        })).isRequired
+    }).isRequired,
+    onClose: PropTypes.func.isRequired
 };
 
 // Service Category Card Component
@@ -132,6 +156,21 @@ const ServiceCategoryCard = ({ category, onExpand }) => {
     );
 };
 
+// PropTypes for ServiceCategoryCard
+ServiceCategoryCard.propTypes = {
+    category: PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        title: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        image: PropTypes.string.isRequired,
+        services: PropTypes.arrayOf(PropTypes.shape({
+            title: PropTypes.string.isRequired,
+            description: PropTypes.string.isRequired
+        })).isRequired
+    }).isRequired,
+    onExpand: PropTypes.func.isRequired
+};
+
 // Services Section Component
 const ServicesSection = () => {
     const [expandedCategory, setExpandedCategory] = useState(null);
@@ -144,69 +183,7 @@ const ServicesSection = () => {
         setExpandedCategory(null);
     };
 
-    // Main service categories data
-    const serviceCategories = [
-        {
-            id: 1,
-            image: "./images/personel-temin-hizmeti.png",
-            title: "Personel Temin Hizmeti",
-            description: "Kalifiye ve deneyimli personel temin hizmetleri",
-            services: [
-                {
-                    title: "Danışma Personeli",
-                    description: "Danışma personeli temin hizmetimizle, ziyaretçilerin karşılanması, yönlendirilmesi ve bilgilendirilmesini profesyonelce sağlıyoruz. Güler yüzlü ve deneyimli personelimizle 7/24 hizmet sunuyoruz."
-                },
-                {
-                    title: "Temizlik Personeli",
-                    description: "Deneyimli ve eğitimli temizlik personeli ile hijyen standartlarınızı koruyoruz. Günlük, haftalık ve aylık temizlik personeli temini."
-                },
-                {
-                    title: "Resepsiyon Görevlisi",
-                    description: "Resepsiyon görevlisi temin hizmetimizle, misafir karşılama, telefon yanıtlama ve yönlendirme işlemlerini profesyonel şekilde yürütüyoruz. Deneyimli ve güler yüzlü personelimizle kurumsal imajınızı en iyi şekilde yansıtıyoruz."
-                },
-                {
-                    title: "Şoför Temini",
-                    description: "Şoför temin hizmetimizle, personel ve misafir taşıma ihtiyaçlarınızı güvenli ve konforlu şekilde karşılıyoruz. Deneyimli ve profesyonel şoförlerimizle zamanında ve sorunsuz ulaşım sağlıyoruz."
-                }
-            ]
-        },
-        {
-            id: 2,
-            image: "./images/site-apartman-hizmetleri.jpg",
-            title: "Yönetim Hizmetleri",
-            description: "Kapsamlı tesis ve site yönetimi çözümleri",
-            services: [
-                {
-                    title: "Site Yönetimi",
-                    description: "Site ve apartman yönetiminde mali, idari ve teknik süreçlerin profesyonel yönetimi. Kapsamlı yönetim hizmetleri ile yaşam kalitenizi artırıyoruz."
-                },
-                {
-                    title: "Tesis Yönetimi",
-                    description: "Tesislerinizin temizlik, bakım, güvenlik ve teknik işletim süreçlerini profesyonelce yönetiyoruz. Verimli ve sürdürülebilir çözümlerle tesislerinizi en iyi şekilde işletiyoruz."
-                }
-            ]
-        },
-        {
-            id: 3,
-            image: "./images/temizlik-hizmetleri.jpg",
-            title: "Temizlik Hizmetleri",
-            description: "Hijyen standartlarına uygun temizlik çözümleri",
-            services: [
-                {
-                    title: "İnşaat Sonrası Temizlik",
-                    description: "İnşaat ve tadilat sonrası oluşan kaba ve ince temizlik ihtiyaçlarınızı titizlikle karşılıyoruz. Yaşam ve çalışma alanlarınızı hızlıca kullanıma hazır hale getiriyoruz."
-                },
-                {
-                    title: "Fabrika Temizliği",
-                    description: "Fabrika ve üretim alanlarınızda hijyen, güvenlik ve verimlilik odaklı profesyonel temizlik hizmeti sunuyoruz. Ağır kir ve endüstriyel atıklara özel çözümlerle çalışıyoruz."
-                },
-                {
-                    title: "Koltuk Temizliği",
-                    description: "Ev, ofis ve ortak alanlardaki koltuklarınızı hijyenik ve özenli bir şekilde temizliyoruz. Leke ve kötü kokulara karşı etkili, kumaş dostu temizlik çözümleri sunuyoruz."
-                }
-            ]
-        }
-    ];
+
 
     return (
         <section id="services" className="py-20 bg-gray-50">
@@ -233,7 +210,7 @@ const ServicesSection = () => {
                 ) : (
                     // Services Grid
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fadeIn">
-                        {serviceCategories.map((category) => (
+                        {SERVICE_CATEGORIES.map((category) => (
                             <ServiceCategoryCard
                                 key={category.id}
                                 category={category}
