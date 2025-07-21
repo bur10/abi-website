@@ -62,7 +62,7 @@
   /* Ensures both columns are the same height */
 }
 
-/* Fade-in animation for services section */
+/* Basic fade-in animation for services section */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -77,4 +77,108 @@
 
 .animate-fadeIn {
   animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Industry-standard card transition animations */
+
+/* Card Grid Animations */
+@keyframes cardEntranceStagger {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes cardExit {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+}
+
+@keyframes expandedViewSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes expandedViewSlideOut {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+  }
+}
+
+/* Animation Classes */
+.animate-cardEntranceStagger {
+  animation: cardEntranceStagger 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+.animate-cardExit {
+  animation: cardExit 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-expandedViewSlideIn {
+  animation: expandedViewSlideIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+.animate-expandedViewSlideOut {
+  animation: expandedViewSlideOut 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Staggered Animation Delays */
+.animate-cardEntranceStagger:nth-child(1) {
+  animation-delay: 0ms;
+}
+
+.animate-cardEntranceStagger:nth-child(2) {
+  animation-delay: 100ms;
+}
+
+.animate-cardEntranceStagger:nth-child(3) {
+  animation-delay: 200ms;
+}
+
+.animate-cardEntranceStagger:nth-child(4) {
+  animation-delay: 300ms;
+}
+
+.animate-cardEntranceStagger:nth-child(5) {
+  animation-delay: 400ms;
+}
+
+.animate-cardEntranceStagger:nth-child(6) {
+  animation-delay: 500ms;
+}
+
+/* Smooth transitions for better UX */
+.transition-smooth {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.transition-smooth-fast {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }

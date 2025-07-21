@@ -38,14 +38,14 @@ ServiceItem.propTypes = {
 // Expanded Service View Component
 const ExpandedServiceView = ({ category, onClose }) => {
     return (
-        <div className="w-full">
+        <div className="w-full animate-expandedViewSlideIn">
             {/* Header */}
             <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-8 rounded-t-lg">
                 <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-4">
                         <button
                             onClick={onClose}
-                            className="p-2 hover:bg-white hover:bg-opacity-20 rounded-full transition-colors"
+                            className="p-2 hover:bg-white hover:bg-opacity-20 rounded-full transition-colors transition-smooth-fast"
                         >
                             <ArrowLeft className="w-6 h-6" />
                         </button>
@@ -87,7 +87,7 @@ const ExpandedServiceView = ({ category, onClose }) => {
                     </p>
                     <a
                         href={createWhatsAppLink(`${category.title} hakkında detaylı bilgi almak istiyorum`)}
-                        className="px-8 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-300 inline-block font-medium"
+                        className="px-8 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-300 inline-block font-medium transition-smooth-fast"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
@@ -115,10 +115,11 @@ ExpandedServiceView.propTypes = {
 };
 
 // Service Category Card Component
-const ServiceCategoryCard = ({ category, onExpand }) => {
+const ServiceCategoryCard = ({ category, onExpand, animationDelay }) => {
     return (
         <div
-            className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105 cursor-pointer group"
+            className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105 cursor-pointer group animate-cardEntranceStagger transition-smooth"
+            style={{ animationDelay: `${animationDelay}ms` }}
             onClick={() => onExpand(category)}
         >
             {/* Image Container */}
@@ -168,22 +169,38 @@ ServiceCategoryCard.propTypes = {
             description: PropTypes.string.isRequired
         })).isRequired
     }).isRequired,
-    onExpand: PropTypes.func.isRequired
+    onExpand: PropTypes.func.isRequired,
+    animationDelay: PropTypes.number
 };
 
 // Services Section Component
 const ServicesSection = () => {
     const [expandedCategory, setExpandedCategory] = useState(null);
+    const [isAnimating, setIsAnimating] = useState(false);
 
     const handleExpand = (category) => {
+        if (isAnimating) return;
+
+        setIsAnimating(true);
         setExpandedCategory(category);
+
+        // Quick timeout just to prevent double-clicks
+        setTimeout(() => {
+            setIsAnimating(false);
+        }, 50);
     };
 
     const handleClose = () => {
+        if (isAnimating) return;
+
+        setIsAnimating(true);
         setExpandedCategory(null);
+
+        // Quick timeout just to prevent double-clicks
+        setTimeout(() => {
+            setIsAnimating(false);
+        }, 50);
     };
-
-
 
     return (
         <section id="services" className="py-20 bg-gray-50">
@@ -201,7 +218,7 @@ const ServicesSection = () => {
                 {/* Content Area */}
                 {expandedCategory ? (
                     // Expanded Service View
-                    <div className="animate-fadeIn">
+                    <div>
                         <ExpandedServiceView
                             category={expandedCategory}
                             onClose={handleClose}
@@ -209,12 +226,13 @@ const ServicesSection = () => {
                     </div>
                 ) : (
                     // Services Grid
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fadeIn">
-                        {SERVICE_CATEGORIES.map((category) => (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {SERVICE_CATEGORIES.map((category, index) => (
                             <ServiceCategoryCard
                                 key={category.id}
                                 category={category}
                                 onExpand={handleExpand}
+                                animationDelay={index * 100}
                             />
                         ))}
                     </div>
