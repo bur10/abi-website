@@ -26,7 +26,7 @@ export const Navbar = () => {
             <div className="max-w-7xl mx-auto px-4">
                 <div className={`relative flex items-center transition-all duration-300 ${isScrolled ? 'h-20' : 'h-32'}`}>
                     {/* Logo - Left on desktop, centered on mobile/tablet */}
-                    <div className="flex items-center justify-center lg:justify-start w-full lg:w-auto">
+                    <div className="flex items-center justify-center lg:justify-start w-full lg:w-auto lg:ml-8">
                         <div className={`relative transition-all duration-300 ${isScrolled ? 'w-16 h-16' : 'w-32 h-32'}`}>
                             <a href="#home">
                                 <img
@@ -39,7 +39,7 @@ export const Navbar = () => {
                     </div>
 
                     {/* Desktop Navigation - Right */}
-                    <div className="hidden lg:flex items-center justify-end space-x-4 ml-auto">
+                    <div className="hidden lg:flex items-center justify-end space-x-4 lg:mr-8 flex-1">
                         <a href="#services" className={`text-gray-600 hover:text-gray-900 px-3 py-2 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-base'}`}>Hizmetler</a>
                         <a href="#service-areas" className={`text-gray-600 hover:text-gray-900 px-3 py-2 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-base'}`}>Hizmet Bölgeleri</a>
                         <a href="#references" className={`text-gray-600 hover:text-gray-900 px-3 py-2 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-base'}`}>Referanslar</a>

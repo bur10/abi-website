@@ -101,7 +101,9 @@ const DetailedAreaView = ({ area }) => {
 
                 {/* Districts */}
                 <div>
-                    <h4 className="text-lg font-semibold text-gray-800 mb-4">Hizmet Verilen İlçeler</h4>
+                    <h4 className="text-lg font-semibold text-gray-800 mb-4">
+                        {area.name === "Ege Bölgesi" ? "Hizmet Verilen İller" : "Hizmet Verilen İlçeler"}
+                    </h4>
                     <div className="grid grid-cols-2 gap-2">
                         {area.districts.map((district, index) => (
                             <div key={index} className="flex items-center space-x-2">

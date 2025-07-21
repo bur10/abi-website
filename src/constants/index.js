@@ -126,32 +126,13 @@ export const SERVICE_CATEGORIES = [
 export const SERVICE_AREAS = [
     {
         id: 1,
-        name: "İzmir Merkez",
-        description: "İzmir'in merkez ilçelerinde 7/24 hizmet veren ana bölgemiz",
-        responseTime: "2 saat içinde",
-        coverage: "Tam kapsamlı hizmet",
-        services: [
-            "Site ve Apartman Yönetimi",
-            "Temizlik Hizmetleri",
-            "Personel Temini",
-            "Peyzaj Hizmetleri",
-            "Havuz Bakım ve Temizliği",
-            "Güvenlik Hizmetleri"
-        ],
-        districts: [
-            "Bornova", "Bayraklı", "Karşıyaka", "Konak",
-            "Balçova", "Narlıdere", "Güzelbahçe", "Gaziemir"
-        ]
-    },
-    {
-        id: 2,
         name: "Torbalı ve Çevreleri",
         description: "Ana merkezimizin bulunduğu Torbalı ve çevre ilçelerde özel hizmet",
         responseTime: "1 saat içinde",
         coverage: "Öncelikli hizmet bölgesi",
         services: [
-            "Site ve Apartman Yönetimi",
             "Temizlik Hizmetleri",
+            "Site ve Apartman Yönetimi",
             "Personel Temini",
             "Peyzaj Hizmetleri",
             "Havuz Bakım ve Temizliği",
@@ -159,7 +140,25 @@ export const SERVICE_AREAS = [
         ],
         districts: [
             "Torbalı", "Selçuk", "Menderes", "Tire",
-            "Bayındır", "Kiraz", "Beydağ"
+            "Bayındır", "Gaziemir", "Menderes",
+            "Kemalpaşa", "Tepeköy"
+        ]
+    },
+    {
+        id: 2,
+        name: "İzmir Merkez",
+        description: "İzmir'in merkez ilçelerinde 7/24 hizmet veren ana bölgemiz",
+        responseTime: "2 saat içinde",
+        coverage: "Tam kapsamlı hizmet",
+        services: [
+            "Site ve Apartman Yönetimi",
+            "Personel Temini",
+            "Peyzaj Hizmetleri",
+            "Güvenlik Hizmetleri"
+        ],
+        districts: [
+            "Bornova", "Bayraklı", "Karşıyaka", "Konak",
+            "Balçova", "Narlıdere", "Güzelbahçe", "Gaziemir"
         ]
     },
     {
@@ -169,10 +168,7 @@ export const SERVICE_AREAS = [
         responseTime: "4-6 saat içinde",
         coverage: "Seçili hizmetler",
         services: [
-            "Site ve Apartman Yönetimi",
-            "Temizlik Hizmetleri",
             "Personel Temini",
-            "Proje Bazlı Hizmetler"
         ],
         districts: [
             "Manisa", "Aydın", "Muğla", "Denizli",
@@ -231,8 +227,8 @@ export const createEmailLink = (subject = "", body = "") => {
 // SEO Meta Tags
 export const SEO_META = {
     title: "Aden Grup - Site Yönetimi ve Temizlik Hizmetleri | İzmir",
-    description: "İzmir'de site yönetimi, temizlik hizmetleri, personel temini ve peyzaj hizmetleri. Profesyonel ekibimizle 2021'den beri hizmet veriyoruz.",
-    keywords: "site yönetimi, temizlik hizmetleri, personel temini, peyzaj hizmetleri, İzmir, Torbalı, apartman yönetimi, havuz bakımı",
+    description: "İzmir ve çevre illerde site yönetimi, Torbalı'da temizlik hizmetleri, İzmir geneline personel temini ve peyzaj hizmetleri. Profesyonel ekibimizle 2021'den beri hizmet veriyoruz.",
+    keywords: "site yönetimi, temizlik hizmetleri, personel temini, peyzaj hizmetleri, İzmir, Torbalı, apartman yönetimi, havuz bakımı, aden grup, aden yönetim ve temizlik hizmetleri, aden, torbalı temizlik",
     author: "Aden Grup",
     viewport: "width=device-width, initial-scale=1.0",
     language: "tr-TR",
