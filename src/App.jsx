@@ -1,44 +1,23 @@
 import React from 'react';
-import './App.css'
-import { Navbar } from './components/Navbar';
-import { HeroSlider } from './components/HeroSlider';
-import ServicesSection from './components/ServicesSection';
-import ServiceAreasSection from './components/ServiceAreasSection';
-import ReferencesSection from './components/ReferencesSection';
-import AboutUsSection from './components/AboutUsSection';
-import Footer from './components/Footer';
-import StickyButton from './components/StickyButton';
-import Subheader from './components/Subheader';
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.css';
+import Layout from './components/Layout';
+import HomePage from './pages/HomePage';
+import ServiceAreasListPage from './pages/ServiceAreasListPage';
+import ServiceAreaPage from './pages/ServiceAreaPage';
 
 const App = () => {
-  return (
-    <div className="min-h-screen bg-white">
-      <StickyButton />
-      <Subheader />
-      <Navbar />
-      <main className='pt-32'>
-        <section id="home">
-          <HeroSlider />
-        </section>
-        <section id="services">
-          <ServicesSection />
-        </section>
-        <section id="service-areas">
-          <ServiceAreasSection />
-        </section>
-        <section id="references">
-          <ReferencesSection />
-        </section>
-        <section id="aboutus" className='py-20 bg-gray-50'>
-          <AboutUsSection />
-        </section>
-        <section id='contact'>
-          <Footer />
-        </section>
-      </main>
-    </div>
-  );
+    return (
+        <Router>
+            <Routes>
+                <Route path="/" element={<Layout />}>
+                    <Route index element={<HomePage />} />
+                    <Route path="hizmet-bolgeleri" element={<ServiceAreasListPage />} />
+                    <Route path="hizmet-bolgeleri/:slug" element={<ServiceAreaPage />} />
+                </Route>
+            </Routes>
+        </Router>
+    );
 };
 
 export default App;
