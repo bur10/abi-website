@@ -8,19 +8,19 @@ export const HeroSlider = () => {
 
     const slides = [
         {
-            image: "./images/slider1.jpg",
+            image: "/images/slider1.jpg",
             title: "Hoş Geldiniz",
             description: "Sektörümüzde Yeniliğin Öncüsü",
             buttonText: "Daha Fazla Bilgi"
         },
         {
-            image: "./images/slider2.jpg",
+            image: "/images/slider2.jpg",
             title: "Kaliteli Hizmetler",
             description: "Yaptığımız Her İşte Mükemmelliği Sunuyoruz",
             buttonText: "Hizmetlerimiz"
         },
         {
-            image: "./images/slider3.jpg",
+            image: "/images/slider3.jpg",
             title: "Uzman Ekip",
             description: "İhtiyaçlarınıza Yönelik Profesyonel Çözümler",
             buttonText: "Bizimle Tanışın"

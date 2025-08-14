@@ -44,7 +44,7 @@ export const Navbar = () => {
                         <div className={`relative transition-all duration-300 ${isScrolled ? 'w-16 h-16' : 'w-32 h-32'}`}>
                             <Link to="/" onClick={() => scrollToSection('home')}>
                                 <img
-                                    src="./images/aden-logo.png"
+                                    src="/images/aden-logo.png"
                                     alt="Company Logo"
                                     className={`w-full h-full object-contain transition-all duration-300`}
                                 />
@@ -55,38 +55,38 @@ export const Navbar = () => {
                     {/* Desktop Navigation - Right */}
                     <div className="hidden lg:flex items-center ml-auto space-x-1">
                         {location.pathname === '/' ? (
-                            <button 
-                                onClick={() => scrollToSection('services')} 
+                            <button
+                                onClick={() => scrollToSection('services')}
                                 className={`text-gray-600 hover:text-gray-900 px-3 py-2 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-base'}`}
                             >
                                 Hizmetler
                             </button>
                         ) : (
-                            <Link 
-                                to="/#services" 
+                            <Link
+                                to="/#services"
                                 className={`text-gray-600 hover:text-gray-900 px-3 py-2 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-base'}`}
                             >
                                 Hizmetler
                             </Link>
                         )}
 
-                        <Link 
-                            to="/hizmet-bolgeleri" 
+                        <Link
+                            to="/hizmet-bolgeleri"
                             className={`text-gray-600 hover:text-gray-900 px-3 py-2 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-base'} ${location.pathname.startsWith('/hizmet-bolgeleri') ? 'text-blue-600 font-medium' : ''}`}
                         >
                             Hizmet Bölgeleri
                         </Link>
 
                         {location.pathname === '/' ? (
-                            <button 
-                                onClick={() => scrollToSection('references')} 
+                            <button
+                                onClick={() => scrollToSection('references')}
                                 className={`text-gray-600 hover:text-gray-900 px-3 py-2 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-base'}`}
                             >
                                 Referanslar
                             </button>
                         ) : (
-                            <Link 
-                                to="/#references" 
+                            <Link
+                                to="/#references"
                                 className={`text-gray-600 hover:text-gray-900 px-3 py-2 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-base'}`}
                             >
                                 Referanslar
@@ -94,15 +94,15 @@ export const Navbar = () => {
                         )}
 
                         {location.pathname === '/' ? (
-                            <button 
-                                onClick={() => scrollToSection('aboutus')} 
+                            <button
+                                onClick={() => scrollToSection('aboutus')}
                                 className={`text-gray-600 hover:text-gray-900 px-3 py-2 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-base'}`}
                             >
                                 Hakkımızda
                             </button>
                         ) : (
-                            <Link 
-                                to="/#aboutus" 
+                            <Link
+                                to="/#aboutus"
                                 className={`text-gray-600 hover:text-gray-900 px-3 py-2 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-base'}`}
                             >
                                 Hakkımızda
@@ -110,15 +110,15 @@ export const Navbar = () => {
                         )}
 
                         {location.pathname === '/' ? (
-                            <button 
-                                onClick={() => scrollToSection('contact')} 
+                            <button
+                                onClick={() => scrollToSection('contact')}
                                 className={`text-gray-600 hover:text-gray-900 px-3 py-2 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-base'}`}
                             >
                                 İletişim
                             </button>
                         ) : (
-                            <Link 
-                                to="/#contact" 
+                            <Link
+                                to="/#contact"
                                 className={`text-gray-600 hover:text-gray-900 px-3 py-2 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-base'}`}
                             >
                                 İletişim
@@ -145,41 +145,41 @@ export const Navbar = () => {
                 <div className={`lg:hidden ${isOpen ? 'block' : 'hidden'} border-t border-gray-200`}>
                     <div className="py-2 space-y-1">
                         {location.pathname === '/' ? (
-                            <button 
-                                onClick={() => scrollToSection('services')} 
+                            <button
+                                onClick={() => scrollToSection('services')}
                                 className="block w-full text-left px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md"
                             >
                                 Hizmetler
                             </button>
                         ) : (
-                            <Link 
-                                to="/#services" 
-                                onClick={() => setIsOpen(false)} 
+                            <Link
+                                to="/#services"
+                                onClick={() => setIsOpen(false)}
                                 className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md"
                             >
                                 Hizmetler
                             </Link>
                         )}
 
-                        <Link 
-                            to="/hizmet-bolgeleri" 
-                            onClick={() => setIsOpen(false)} 
+                        <Link
+                            to="/hizmet-bolgeleri"
+                            onClick={() => setIsOpen(false)}
                             className={`block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md ${location.pathname.startsWith('/hizmet-bolgeleri') ? 'text-blue-600 font-medium' : ''}`}
                         >
                             Hizmet Bölgeleri
                         </Link>
 
                         {location.pathname === '/' ? (
-                            <button 
-                                onClick={() => scrollToSection('references')} 
+                            <button
+                                onClick={() => scrollToSection('references')}
                                 className="block w-full text-left px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md"
                             >
                                 Referanslar
                             </button>
                         ) : (
-                            <Link 
-                                to="/#references" 
-                                onClick={() => setIsOpen(false)} 
+                            <Link
+                                to="/#references"
+                                onClick={() => setIsOpen(false)}
                                 className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md"
                             >
                                 Referanslar
@@ -187,16 +187,16 @@ export const Navbar = () => {
                         )}
 
                         {location.pathname === '/' ? (
-                            <button 
-                                onClick={() => scrollToSection('aboutus')} 
+                            <button
+                                onClick={() => scrollToSection('aboutus')}
                                 className="block w-full text-left px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md"
                             >
                                 Hakkımızda
                             </button>
                         ) : (
-                            <Link 
-                                to="/#aboutus" 
-                                onClick={() => setIsOpen(false)} 
+                            <Link
+                                to="/#aboutus"
+                                onClick={() => setIsOpen(false)}
                                 className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md"
                             >
                                 Hakkımızda
@@ -204,16 +204,16 @@ export const Navbar = () => {
                         )}
 
                         {location.pathname === '/' ? (
-                            <button 
-                                onClick={() => scrollToSection('contact')} 
+                            <button
+                                onClick={() => scrollToSection('contact')}
                                 className="block w-full text-left px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md"
                             >
                                 İletişim
                             </button>
                         ) : (
-                            <Link 
-                                to="/#contact" 
-                                onClick={() => setIsOpen(false)} 
+                            <Link
+                                to="/#contact"
+                                onClick={() => setIsOpen(false)}
                                 className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md"
                             >
                                 İletişim

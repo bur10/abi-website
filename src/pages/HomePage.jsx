@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { HeroSlider } from '../components/HeroSlider';
 import ServicesSection from '../components/ServicesSection';
 import ServiceAreasSection from '../components/ServiceAreasSection';
@@ -8,6 +9,11 @@ import AboutUsSection from '../components/AboutUsSection';
 const HomePage = () => {
     return (
         <>
+            <Helmet>
+                <title>Aden Grup - Site Yönetimi ve Temizlik Hizmetleri | İzmir</title>
+                <meta name="description" content="İzmir ve çevresinde site yönetimi, temizlik hizmetleri, personel temini ve peyzaj hizmetleri. Profesyonel ekibimizle yanınızdayız." />
+                <link rel="canonical" href="https://www.adengruptr.com" />
+            </Helmet>
             <section id="home">
                 <HeroSlider />
             </section>

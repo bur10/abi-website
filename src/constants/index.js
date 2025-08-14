@@ -62,7 +62,7 @@ export const COLORS = {
 export const SERVICE_CATEGORIES = [
     {
         id: 1,
-        image: "./images/personel-temin-hizmeti.png",
+        image: "/images/personel-temin-hizmeti.png",
         title: "Personel Temin Hizmeti",
         description: "Kalifiye ve deneyimli personel temin hizmetleri",
         services: [
@@ -86,7 +86,7 @@ export const SERVICE_CATEGORIES = [
     },
     {
         id: 2,
-        image: "./images/site-apartman-hizmetleri.jpg",
+        image: "/images/site-apartman-hizmetleri.jpg",
         title: "Yönetim Hizmetleri",
         description: "Kapsamlı tesis ve site yönetimi çözümleri",
         services: [
@@ -102,7 +102,7 @@ export const SERVICE_CATEGORIES = [
     },
     {
         id: 3,
-        image: "./images/temizlik-hizmetleri.jpg",
+        image: "/images/temizlik-hizmetleri.jpg",
         title: "Temizlik Hizmetleri",
         description: "Hijyen standartlarına uygun temizlik çözümleri",
         services: [
@@ -196,20 +196,20 @@ export const SERVICE_AREAS = [
 
 // References
 export const REFERENCES = [
-    { id: 1, image: "./images/references/galetos.png", title: "Galetos" },
-    { id: 2, image: "./images/references/oasis-marina.jpg", title: "OASİS Marina" },
-    { id: 3, image: "./images/references/bakan_insaat.jpg", title: "Bakan Gayrimenkul" },
-    { id: 4, image: "./images/references/omeroglu-baharat.png", title: "Ömeroğlu Baharat" },
-    { id: 5, image: "./images/references/mia-koru.png", title: "Mia Koru" },
-    { id: 6, image: "./images/references/viven.jpg", title: "Viven İnşaat" },
-    { id: 7, image: "./images/references/last_point_city.jpg", title: "Last Point City" },
-    { id: 8, image: "./images/references/alacati_muhallebicisi.jpeg", title: "Alaçatı Muhallebicisi" },
-    { id: 9, image: "./images/references/krv_insaat.png", title: "KRV İnşaat" },
-    { id: 10, image: "./images/references/ertok_insaat.png", title: "Ertok İnşaat" },
-    { id: 11, image: "./images/references/mimkent_vista.png", title: "Mimkent Vista" },
-    { id: 12, image: "./images/references/ozkon_insaat.png", title: "Özkon İnşaat" },
-    { id: 13, image: "./images/references/dasif_insaat.jpg", title: "Dasif İnşaat" },
-    { id: 14, image: "./images/references/pizza_locale.jpg", title: "Pizza Locale" },
+    { id: 1, image: "/images/references/galetos.png", title: "Galetos" },
+    { id: 2, image: "/images/references/oasis-marina.jpg", title: "OASİS Marina" },
+    { id: 3, image: "/images/references/bakan_insaat.jpg", title: "Bakan Gayrimenkul" },
+    { id: 4, image: "/images/references/omeroglu-baharat.png", title: "Ömeroğlu Baharat" },
+    { id: 5, image: "/images/references/mia-koru.png", title: "Mia Koru" },
+    { id: 6, image: "/images/references/viven.jpg", title: "Viven İnşaat" },
+    { id: 7, image: "/images/references/last_point_city.jpg", title: "Last Point City" },
+    { id: 8, image: "/images/references/alacati_muhallebicisi.jpeg", title: "Alaçatı Muhallebicisi" },
+    { id: 9, image: "/images/references/krv_insaat.png", title: "KRV İnşaat" },
+    { id: 10, image: "/images/references/ertok_insaat.png", title: "Ertok İnşaat" },
+    { id: 11, image: "/images/references/mimkent_vista.png", title: "Mimkent Vista" },
+    { id: 12, image: "/images/references/ozkon_insaat.png", title: "Özkon İnşaat" },
+    { id: 13, image: "/images/references/dasif_insaat.jpg", title: "Dasif İnşaat" },
+    { id: 14, image: "/images/references/pizza_locale.jpg", title: "Pizza Locale" },
 ];
 
 // Utility Functions
