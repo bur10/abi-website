@@ -1,41 +1,66 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Phone, Mail, Facebook, Twitter, Instagram, Clock } from 'lucide-react';
+import GetDealModal from './GetDealModal';
 
 const Subheader = () => {
-    return (
-        <div className="bg-gray-900 text-gray-100 z-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex flex-col sm:flex-row justify-between items-center py-2 text-sm">
-                    <div className="flex items-center space-x-4 mb-2 sm:mb-0">
-                        <div className="flex items-center">
-                            <Phone className="w-4 h-4 mr-2" />
-                            <a href="tel:+905324590096" className="hover:text-gray-300 transition-colors">
-                                +90 (532) 459 00 96
-                            </a>
-                        </div>
-                        <div className="hidden sm:flex items-center">
-                            <Mail className="w-4 h-4 mr-2" />
-                            <a href="mailto:info@adengruptr.com" className="hover:text-gray-300 transition-colors">
-                                info@adengruptr.com
-                            </a>
-                        </div>
-                    </div>
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
-                    {/* Right side - Social Links */}
-                    <div className="flex items-center space-x-4">
-                        <a
-                            href="https://instagram.com/adengruptr"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:text-gray-300 transition-colors flex items-center gap-1"
-                        >
-                            <Instagram className="w-4 h-4" />
-                            <span>adengruptr</span>
-                        </a>
+    return (
+        <>
+            <div className="bg-gray-900 text-gray-100 z-50">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="flex flex-col sm:flex-row justify-between items-center py-2 text-sm">
+                        <div className="flex items-center space-x-4 mb-2 sm:mb-0">
+                            <div className="flex items-center">
+                                <Phone className="w-4 h-4 mr-2" />
+                                <a href="tel:+905324590096" className="hover:text-gray-300 transition-colors">
+                                    +90 (532) 459 00 96
+                                </a>
+                            </div>
+                            <div className="hidden sm:flex items-center">
+                                <button
+                                    onClick={() => setIsModalOpen(true)}
+                                    className="text-gray-100 hover:text-white px-3 py-1 font-medium transition-colors duration-200 flex items-center"
+                                >
+                                    <i className="fas fa-handshake mr-1.5 text-xs"></i>
+                                    Teklif Al
+                                </button>
+                            </div>
+                        </div>
+
+                        {/* Right side - Social Links and Mobile Button */}
+                        <div className="flex items-center space-x-4">
+                            {/* Mobile Teklif Al Button */}
+                            <div className="sm:hidden">
+                                <button
+                                    onClick={() => setIsModalOpen(true)}
+                                    className="text-gray-100 hover:text-white px-3 py-1 font-medium transition-colors duration-200 flex items-center text-xs"
+                                >
+                                    <i className="fas fa-handshake mr-1 text-xs"></i>
+                                    Teklif Al
+                                </button>
+                            </div>
+
+                            <a
+                                href="https://instagram.com/adengruptr"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:text-gray-300 transition-colors flex items-center gap-1"
+                            >
+                                <Instagram className="w-4 h-4" />
+                                <span>adengruptr</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+
+            {/* Modal */}
+            <GetDealModal
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+            />
+        </>
     );
 };
 

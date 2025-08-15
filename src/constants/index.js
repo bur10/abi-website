@@ -140,8 +140,7 @@ export const SERVICE_AREAS = [
         ],
         districts: [
             "Torbalı", "Selçuk", "Menderes", "Tire",
-            "Bayındır", "Gaziemir", "Menderes",
-            "Kemalpaşa", "Tepeköy"
+            "Bayındır", "Gaziemir", "Kemalpaşa", "Tepeköy"
         ]
     },
     {
