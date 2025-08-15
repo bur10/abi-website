@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Phone, Mail, Facebook, Twitter, Instagram, Clock } from 'lucide-react';
-import GetDealModal from './GetDealModal';
 
-const Subheader = () => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
+const Subheader = ({ openModal }) => {
 
     return (
         <>
@@ -19,7 +17,7 @@ const Subheader = () => {
                             </div>
                             <div className="hidden sm:flex items-center">
                                 <button
-                                    onClick={() => setIsModalOpen(true)}
+                                    onClick={openModal}
                                     className="text-gray-100 hover:text-white px-3 py-1 font-medium transition-colors duration-200 flex items-center"
                                 >
                                     <i className="fas fa-handshake mr-1.5 text-xs"></i>
@@ -33,7 +31,7 @@ const Subheader = () => {
                             {/* Mobile Teklif Al Button */}
                             <div className="sm:hidden">
                                 <button
-                                    onClick={() => setIsModalOpen(true)}
+                                    onClick={openModal}
                                     className="text-gray-100 hover:text-white px-3 py-1 font-medium transition-colors duration-200 flex items-center text-xs"
                                 >
                                     <i className="fas fa-handshake mr-1 text-xs"></i>
@@ -54,12 +52,6 @@ const Subheader = () => {
                     </div>
                 </div>
             </div>
-
-            {/* Modal */}
-            <GetDealModal
-                isOpen={isModalOpen}
-                onClose={() => setIsModalOpen(false)}
-            />
         </>
     );
 };

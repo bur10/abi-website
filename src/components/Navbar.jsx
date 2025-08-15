@@ -4,7 +4,7 @@ import { Menu, X } from 'lucide-react';
 import { COMPANY_INFO } from '../constants';
 import Subheader from './Subheader';
 
-export const Navbar = () => {
+export const Navbar = ({ openModal }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const location = useLocation();
@@ -36,7 +36,7 @@ export const Navbar = () => {
 
     return (
         <nav className={`fixed top-0 left-0 right-0 bg-white shadow-lg z-50 transition-all duration-300`}>
-            <Subheader />
+            <Subheader openModal={openModal} />
             <div className="max-w-7xl mx-auto px-4">
                 <div className={`relative flex items-center transition-all duration-300 ${isScrolled ? 'h-20' : 'h-32'}`}>
                     {/* Logo - Left on desktop, centered on mobile/tablet */}
