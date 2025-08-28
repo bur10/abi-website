@@ -20,8 +20,8 @@ const Subheader = ({ openModal }) => {
                                     onClick={openModal}
                                     className="text-gray-100 hover:text-white px-3 py-1 font-medium transition-colors duration-200 flex items-center"
                                 >
-                                    <i className="fas fa-handshake mr-1.5 text-xs"></i>
-                                    Teklif Al
+                                    <i className="fas fa-broom mr-1.5 text-xs"></i>
+                                    Temizlik Talebi
                                 </button>
                             </div>
                         </div>
@@ -34,8 +34,8 @@ const Subheader = ({ openModal }) => {
                                     onClick={openModal}
                                     className="text-gray-100 hover:text-white px-3 py-1 font-medium transition-colors duration-200 flex items-center text-xs"
                                 >
-                                    <i className="fas fa-handshake mr-1 text-xs"></i>
-                                    Teklif Al
+                                    <i className="fas fa-broom mr-1 text-xs"></i>
+                                    Temizlik Talebi
                                 </button>
                             </div>
 

@@ -13,8 +13,8 @@ const StickyButton = ({ openModal, isModalOpen }) => {
                     : 'bg-blue-500 text-white hover:bg-blue-600'
                     }`}
             >
-                <i className="fas fa-handshake mr-2"></i>
-                <span className="hidden md:block">3 Adımda Teklif Al!</span>
+                <i className="fas fa-broom mr-2"></i>
+                <span className="hidden md:block">Temizlik Hizmeti Al!</span>
             </button>
 
             {/* WhatsApp Button */}

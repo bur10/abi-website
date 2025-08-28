@@ -115,8 +115,20 @@ export const SERVICE_CATEGORIES = [
                 description: "Fabrika ve üretim alanlarınızda hijyen, güvenlik ve verimlilik odaklı profesyonel temizlik hizmeti sunuyoruz. Ağır kir ve endüstriyel atıklara özel çözümlerle çalışıyoruz."
             },
             {
-                title: "Koltuk Temizliği",
-                description: "Ev, ofis ve ortak alanlardaki koltuklarınızı hijyenik ve özenli bir şekilde temizliyoruz. Leke ve kötü kokulara karşı etkili, kumaş dostu temizlik çözümleri sunuyoruz."
+                title: "Merdiven Temizliği",
+                description: "Merdivenlerinizin temizliğini profesyonelce yapıyoruz. Hızlıca ve güvenli bir şekilde temizlik hizmeti sunuyoruz."
+            },
+            {
+                title: "Ofis Temizliği",
+                description: "Ofislerinizin temizliğini profesyonelce yapıyoruz. Hızlıca ve güvenli bir şekilde temizlik hizmeti sunuyoruz."
+            },
+            {
+                title: "Ev Temizliği",
+                description: "Evlerinizin temizliğini profesyonelce yapıyoruz. Hızlıca ve güvenli bir şekilde temizlik hizmeti sunuyoruz."
+            },
+            {
+                title: "Site/Apartman Temizliği",
+                description: "Site ve apartmanların temizliğini profesyonelce yapıyoruz. Hızlıca ve güvenli bir şekilde temizlik hizmeti sunuyoruz."
             }
         ]
     }
@@ -139,8 +151,7 @@ export const SERVICE_AREAS = [
             "Acil Müdahale"
         ],
         districts: [
-            "Torbalı", "Selçuk", "Menderes", "Tire",
-            "Bayındır", "Gaziemir", "Kemalpaşa", "Tepeköy"
+            "Torbalı", "Selçuk", "Menderes", "Tire", "Gaziemir", "Kemalpaşa"
         ]
     },
     {
