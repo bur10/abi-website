@@ -15,7 +15,7 @@ const ServiceAreaPage = () => {
         if (!area) {
             return <Navigate to="/hizmet-bolgeleri" replace />;
         }
-        const canonical = `https://www.adengruptr.com/hizmet-bolgeleri/${slug}`;
+        const canonical = `https://www.adenmanagement.com/hizmet-bolgeleri/${slug}`;
         return (
             <>
                 <Helmet>
@@ -34,7 +34,7 @@ const ServiceAreaPage = () => {
         if (!serviceData) {
             return <Navigate to="/hizmet-bolgeleri" replace />;
         }
-        const canonical = `https://www.adengruptr.com/hizmet-bolgeleri/${slug}`;
+        const canonical = `https://www.adenmanagement.com/hizmet-bolgeleri/${slug}`;
         return (
             <>
                 <Helmet>
