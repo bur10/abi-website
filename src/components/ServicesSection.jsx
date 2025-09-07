@@ -184,6 +184,14 @@ const ServicesSection = () => {
         setIsAnimating(true);
         setExpandedCategory(category);
 
+        // Scroll to the top of the services section when expanding
+        setTimeout(() => {
+            const servicesSection = document.getElementById('services');
+            if (servicesSection) {
+                servicesSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }, 100);
+
         // Quick timeout just to prevent double-clicks
         setTimeout(() => {
             setIsAnimating(false);
@@ -195,6 +203,14 @@ const ServicesSection = () => {
 
         setIsAnimating(true);
         setExpandedCategory(null);
+
+        // Scroll to the top of the services section when closing
+        setTimeout(() => {
+            const servicesSection = document.getElementById('services');
+            if (servicesSection) {
+                servicesSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }, 100);
 
         // Quick timeout just to prevent double-clicks
         setTimeout(() => {

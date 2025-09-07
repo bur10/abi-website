@@ -34,6 +34,17 @@ export const Navbar = ({ openModal }) => {
         setIsOpen(false);
     };
 
+    // Handle navigation to home page with hash
+    const handleHomePageNavigation = (hash) => {
+        if (location.pathname === '/') {
+            // If already on home page, scroll to section
+            scrollToSection(hash.replace('#', ''));
+        } else {
+            // If on different page, navigate to home with hash
+            window.location.href = `/${hash}`;
+        }
+    };
+
     return (
         <nav className={`fixed top-0 left-0 right-0 bg-white shadow-lg z-50 transition-all duration-300`}>
             <Subheader openModal={openModal} />
@@ -62,12 +73,12 @@ export const Navbar = ({ openModal }) => {
                                 Hizmetler
                             </button>
                         ) : (
-                            <Link
-                                to="/#services"
+                            <button
+                                onClick={() => handleHomePageNavigation('#services')}
                                 className={`text-gray-600 hover:text-gray-900 px-3 py-2 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-base'}`}
                             >
                                 Hizmetler
-                            </Link>
+                            </button>
                         )}
 
                         <Link
@@ -92,12 +103,12 @@ export const Navbar = ({ openModal }) => {
                                 Referanslar
                             </button>
                         ) : (
-                            <Link
-                                to="/#references"
+                            <button
+                                onClick={() => handleHomePageNavigation('#references')}
                                 className={`text-gray-600 hover:text-gray-900 px-3 py-2 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-base'}`}
                             >
                                 Referanslar
-                            </Link>
+                            </button>
                         )}
 
                         {location.pathname === '/' ? (
@@ -108,12 +119,12 @@ export const Navbar = ({ openModal }) => {
                                 Hakkımızda
                             </button>
                         ) : (
-                            <Link
-                                to="/#aboutus"
+                            <button
+                                onClick={() => handleHomePageNavigation('#aboutus')}
                                 className={`text-gray-600 hover:text-gray-900 px-3 py-2 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-base'}`}
                             >
                                 Hakkımızda
-                            </Link>
+                            </button>
                         )}
 
                         {location.pathname === '/' ? (
@@ -124,12 +135,12 @@ export const Navbar = ({ openModal }) => {
                                 İletişim
                             </button>
                         ) : (
-                            <Link
-                                to="/#contact"
+                            <button
+                                onClick={() => handleHomePageNavigation('#contact')}
                                 className={`text-gray-600 hover:text-gray-900 px-3 py-2 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-base'}`}
                             >
                                 İletişim
-                            </Link>
+                            </button>
                         )}
                     </div>
 
@@ -159,13 +170,15 @@ export const Navbar = ({ openModal }) => {
                                 Hizmetler
                             </button>
                         ) : (
-                            <Link
-                                to="/#services"
-                                onClick={() => setIsOpen(false)}
-                                className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md"
+                            <button
+                                onClick={() => {
+                                    handleHomePageNavigation('#services');
+                                    setIsOpen(false);
+                                }}
+                                className="block w-full text-left px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md"
                             >
                                 Hizmetler
-                            </Link>
+                            </button>
                         )}
 
                         <Link
@@ -192,13 +205,15 @@ export const Navbar = ({ openModal }) => {
                                 Referanslar
                             </button>
                         ) : (
-                            <Link
-                                to="/#references"
-                                onClick={() => setIsOpen(false)}
-                                className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md"
+                            <button
+                                onClick={() => {
+                                    handleHomePageNavigation('#references');
+                                    setIsOpen(false);
+                                }}
+                                className="block w-full text-left px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md"
                             >
                                 Referanslar
-                            </Link>
+                            </button>
                         )}
 
                         {location.pathname === '/' ? (
@@ -209,13 +224,15 @@ export const Navbar = ({ openModal }) => {
                                 Hakkımızda
                             </button>
                         ) : (
-                            <Link
-                                to="/#aboutus"
-                                onClick={() => setIsOpen(false)}
-                                className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md"
+                            <button
+                                onClick={() => {
+                                    handleHomePageNavigation('#aboutus');
+                                    setIsOpen(false);
+                                }}
+                                className="block w-full text-left px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md"
                             >
                                 Hakkımızda
-                            </Link>
+                            </button>
                         )}
 
                         {location.pathname === '/' ? (
@@ -226,13 +243,15 @@ export const Navbar = ({ openModal }) => {
                                 İletişim
                             </button>
                         ) : (
-                            <Link
-                                to="/#contact"
-                                onClick={() => setIsOpen(false)}
-                                className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md"
+                            <button
+                                onClick={() => {
+                                    handleHomePageNavigation('#contact');
+                                    setIsOpen(false);
+                                }}
+                                className="block w-full text-left px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md"
                             >
                                 İletişim
-                            </Link>
+                            </button>
                         )}
                     </div>
                 </div>

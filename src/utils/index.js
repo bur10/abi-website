@@ -45,21 +45,21 @@ export const generateBreadcrumbs = (areaName, serviceName = null) => {
         { name: 'Ana Sayfa', path: '/' },
         { name: 'Hizmet Bölgeleri', path: '/hizmet-bolgeleri' }
     ];
-    
+
     if (areaName) {
         breadcrumbs.push({
             name: areaName,
             path: `/hizmet-bolgeleri/${createServiceAreaSlug(areaName)}`
         });
     }
-    
+
     if (serviceName) {
         breadcrumbs.push({
             name: serviceName,
             path: `/hizmet-bolgeleri/${createServiceSlug(areaName, serviceName)}`
         });
     }
-    
+
     return breadcrumbs;
 };
 
@@ -88,4 +88,22 @@ export const isServiceAreaSlug = (slug, serviceAreas) => {
 // Check if slug is a service slug
 export const isServiceSlug = (slug, serviceAreas) => {
     return getServiceBySlug(slug, serviceAreas) !== null;
+};
+
+// Environment detection utilities
+export const isDevelopment = () => {
+    return import.meta.env.DEV ||
+        window.location.hostname === 'localhost' ||
+        window.location.hostname === '127.0.0.1' ||
+        window.location.hostname.includes('dev') ||
+        window.location.protocol === 'file:';
+};
+
+export const isProduction = () => {
+    return !isDevelopment();
+};
+
+// Check if analytics should be loaded
+export const shouldLoadAnalytics = () => {
+    return isProduction();
 }; 

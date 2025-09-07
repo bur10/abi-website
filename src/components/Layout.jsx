@@ -4,6 +4,7 @@ import { Navbar } from './Navbar';
 import Footer from './Footer';
 import StickyButton from './StickyButton';
 import GetDealModal from './GetDealModal';
+import ScrollToTop from './ScrollToTop';
 
 const Layout = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -13,6 +14,7 @@ const Layout = () => {
 
     return (
         <div className="min-h-screen bg-white">
+            <ScrollToTop />
             <StickyButton openModal={openModal} isModalOpen={isModalOpen} />
             <Navbar openModal={openModal} />
             <main className="pt-32">
