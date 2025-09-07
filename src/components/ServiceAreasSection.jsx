@@ -9,51 +9,59 @@ import { createServiceAreaSlug } from '../utils';
 const ServiceAreaCard = ({ area, animationDelay }) => {
     return (
         <div
-            className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl hover:scale-105 border-2 border-gray-200 hover:border-blue-300 transition-all duration-300 animate-cardEntranceStagger h-full flex flex-col"
+            className="service-area-card bg-white rounded-xl shadow-lg p-6 hover:shadow-xl hover:scale-105 border-2 border-gray-200 hover:border-blue-300 transition-all duration-300 animate-cardEntranceStagger"
             style={{ animationDelay: `${animationDelay}ms` }}
         >
-            <div className="flex items-center justify-between mb-4">
-                <h3 className="text-xl font-bold text-gray-800">
+            {/* Header Section - Fixed Height */}
+            <div className="flex items-center justify-between mb-4 h-8">
+                <h3 className="text-xl font-bold text-gray-800 truncate">
                     {area.name}
                 </h3>
-                <MapPin className="w-6 h-6 text-blue-500" />
+                <MapPin className="w-6 h-6 text-blue-500 flex-shrink-0" />
             </div>
 
-            <p className="text-gray-600 mb-4 flex-grow">{area.description}</p>
+            {/* Description Section - Fixed Height */}
+            <div className="mb-4 h-16 flex items-start">
+                <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
+                    {area.description}
+                </p>
+            </div>
 
-            <div className="space-y-2 mb-4">
+            {/* Info Section - Fixed Height */}
+            <div className="space-y-2 mb-4 h-16">
                 <div className="flex items-center space-x-2">
-                    <Clock className="w-4 h-4 text-gray-500" />
+                    <Clock className="w-4 h-4 text-gray-500 flex-shrink-0" />
                     <span className="text-sm text-gray-600">{area.responseTime}</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                     <span className="text-sm text-gray-600">{area.coverage}</span>
                 </div>
             </div>
 
-            {/* Services Preview */}
-            <div className="mb-6">
+            {/* Services Preview Section - Fixed Height */}
+            <div className="mb-6 h-28">
                 <h4 className="text-sm font-semibold text-gray-700 mb-2">
                     Sunulan Hizmetler:
                 </h4>
-                <div className="flex flex-wrap gap-1">
+                <div className="services-tags h-20">
                     {area.services.slice(0, 3).map((service, idx) => (
                         <span
                             key={idx}
-                            className="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full"
+                            className="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full mb-1 mr-1"
                         >
                             {service}
                         </span>
                     ))}
                     {area.services.length > 3 && (
-                        <span className="inline-block px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
+                        <span className="inline-block px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full mb-1 mr-1">
                             +{area.services.length - 3} daha
                         </span>
                     )}
                 </div>
             </div>
 
+            {/* Button Section - Fixed at Bottom */}
             <div className="mt-auto">
                 <Link
                     to={`/hizmet-bolgeleri/${createServiceAreaSlug(area.name)}`}
@@ -105,7 +113,7 @@ const ServiceAreasSection = () => {
                 </div>
 
                 {/* Service Areas Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                <div className="service-areas-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mb-16">
                     {SERVICE_AREAS.map((area, index) => (
                         <ServiceAreaCard
                             key={area.id}

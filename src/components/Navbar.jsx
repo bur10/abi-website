@@ -77,6 +77,13 @@ export const Navbar = ({ openModal }) => {
                             Hizmet Bölgeleri
                         </Link>
 
+                        <Link
+                            to="/blog"
+                            className={`text-gray-600 hover:text-gray-900 px-3 py-2 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-base'} ${location.pathname.startsWith('/blog') ? 'text-blue-600 font-medium' : ''}`}
+                        >
+                            Blog
+                        </Link>
+
                         {location.pathname === '/' ? (
                             <button
                                 onClick={() => scrollToSection('references')}
@@ -167,6 +174,14 @@ export const Navbar = ({ openModal }) => {
                             className={`block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md ${location.pathname.startsWith('/hizmet-bolgeleri') ? 'text-blue-600 font-medium' : ''}`}
                         >
                             Hizmet Bölgeleri
+                        </Link>
+
+                        <Link
+                            to="/blog"
+                            onClick={() => setIsOpen(false)}
+                            className={`block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md ${location.pathname.startsWith('/blog') ? 'text-blue-600 font-medium' : ''}`}
+                        >
+                            Blog
                         </Link>
 
                         {location.pathname === '/' ? (

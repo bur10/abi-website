@@ -243,4 +243,15 @@ export const SEO_META = {
     viewport: "width=device-width, initial-scale=1.0",
     language: "tr-TR",
     robots: "index, follow"
+};
+
+// Blog SEO Meta Tags
+export const BLOG_SEO_META = {
+    title: "Blog - Temizlik ve Yönetim Hizmetleri | Aden Grup",
+    description: "İzmir ve Torbalı'da temizlik hizmetleri, site yönetimi ve personel temini hakkında güncel bilgiler, ipuçları ve uzman görüşleri. Aden Grup uzman ekibinin deneyimleri.",
+    keywords: "temizlik blog, site yönetimi blog, personel temini blog, izmir temizlik, torbalı temizlik, aden grup blog, temizlik ipuçları, site yönetimi rehberi",
+    author: "Aden Grup",
+    viewport: "width=device-width, initial-scale=1.0",
+    language: "tr-TR",
+    robots: "index, follow"
 }; 

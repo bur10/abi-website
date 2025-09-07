@@ -4,7 +4,7 @@ import { ChevronRight, Home } from 'lucide-react';
 
 const Breadcrumb = ({ breadcrumbs }) => {
     return (
-        <nav className="bg-gray-50 py-4">
+        <div className="py-4">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <ol className="flex items-center space-x-2 text-sm">
                     {breadcrumbs.map((breadcrumb, index) => (
@@ -29,7 +29,7 @@ const Breadcrumb = ({ breadcrumbs }) => {
                     ))}
                 </ol>
             </div>
-        </nav>
+        </div>
     );
 };
 
