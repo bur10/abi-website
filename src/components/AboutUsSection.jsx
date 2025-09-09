@@ -21,7 +21,7 @@ const AboutUsSection = () => {
                         Biz kimiz?
                     </h3>
                     <p className="text-gray-600 leading-relaxed">
-                        {COMPANY_INFO.shortName}, {COMPANY_INFO.foundedYear} yılında {COMPANY_INFO.city}'de kurulmuş, site yönetimi alanında uzmanlaşmış bir firmadır. Müşterilerine sunduğu kapsamlı hizmetlerle, peyzaj düzenleme, temizlik ve havuz bakımı gibi birçok alanda yüksek kalite ve titizlikle çözümler üretmektedir. Amacımız, yaşam alanlarınızı daha düzenli, temiz ve sağlıklı hale getirirken, sizlere güvenilir ve sürdürülebilir bir yönetim deneyimi sunmaktır.
+                        {COMPANY_INFO.shortName}, {COMPANY_INFO.foundedYear} yılında {COMPANY_INFO.city}'de kurulmuş, site yönetimi ve temizlik hizmetleri alanında uzmanlaşmış bir firmadır. Müşterilerine sunduğu kapsamlı hizmetlerle, peyzaj düzenleme, temizlik ve havuz bakımı gibi birçok alanda yüksek kalite ve titizlikle çözümler üretmektedir. Amacımız, yaşam alanlarınızı daha düzenli, temiz ve sağlıklı hale getirirken, sizlere güvenilir ve sürdürülebilir bir yönetim deneyimi sunmaktır.
 
                     </p>
                     <p className="text-gray-600 leading-relaxed">
@@ -54,7 +54,7 @@ const AboutUsSection = () => {
                                 loop
                                 controls
                                 className="absolute top-0 left-0 w-full h-full object-cover"
-                                src="./videos/aden.mp4"
+                                src="./videos/aboutus.mp4"
                             />
                         </div>
 

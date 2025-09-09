@@ -20,15 +20,16 @@ const HomePage = () => {
             <section id="services">
                 <ServicesSection />
             </section>
+            <section id="aboutus" className="py-20 bg-gray-50">
+                <AboutUsSection />
+            </section>
             <section id="service-areas">
                 <ServiceAreasSection />
             </section>
             <section id="references">
                 <ReferencesSection />
             </section>
-            <section id="aboutus" className="py-20 bg-gray-50">
-                <AboutUsSection />
-            </section>
+
         </>
     );
 };
