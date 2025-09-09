@@ -207,8 +207,10 @@ export const SERVICE_AREAS = [
 // References
 export const REFERENCES = [
     { id: 1, image: "/images/references/galetos.png", title: "Galetos" },
+    { id: 15, image: "/images/references/mirnas_grup.png", title: "Mirnas Grup" },
     { id: 2, image: "/images/references/oasis-marina.jpg", title: "OASİS Marina" },
     { id: 3, image: "/images/references/bakan_insaat.jpg", title: "Bakan Gayrimenkul" },
+    { id: 17, image: "/images/references/bahcesehir_koleji.png", title: "Bahçeşehir Koleji" },
     { id: 4, image: "/images/references/omeroglu-baharat.png", title: "Ömeroğlu Baharat" },
     { id: 5, image: "/images/references/mia-koru.png", title: "Mia Koru" },
     { id: 6, image: "/images/references/viven.jpg", title: "Viven İnşaat" },
@@ -220,6 +222,7 @@ export const REFERENCES = [
     { id: 12, image: "/images/references/ozkon_insaat.png", title: "Özkon İnşaat" },
     { id: 13, image: "/images/references/dasif_insaat.jpg", title: "Dasif İnşaat" },
     { id: 14, image: "/images/references/pizza_locale.jpg", title: "Pizza Locale" },
+    { id: 16, image: "/images/references/united_spor_akademi.png", title: "United Sports Akademi" },
 ];
 
 // Utility Functions
