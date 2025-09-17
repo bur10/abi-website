@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { X, ChevronLeft, ChevronRight, Check, MapPin, Loader2 } from 'lucide-react';
 import { SERVICE_AREAS, SERVICE_CATEGORIES, COMPANY_INFO } from '../constants';
 import { FORM_ENDPOINT, DEV_MODE, FORM_CONFIG, VALIDATION_CONFIG, ERROR_MESSAGES } from '../config/form-config';
+import logger from '../utils/logger';
 
 const GetDealModal = ({ isOpen, onClose }) => {
     const [currentStep, setCurrentStep] = useState(1);
@@ -152,7 +153,7 @@ const GetDealModal = ({ isOpen, onClose }) => {
 
         // Special handling for phone field
         if (field === 'phone') {
-            console.log('Phone field changed:', value);
+            logger.component('GetDealModal', 'Phone field changed', { value });
             processedValue = formatPhoneDigits(value, formData.phone);
 
             // Only validate if there's actually content
@@ -245,8 +246,8 @@ const GetDealModal = ({ isOpen, onClose }) => {
 
     // Submit form data to Google Apps Script using fetch
     const submitToBackend = async (formDataToSubmit) => {
-        console.log('Attempting backend submission...');
-        console.log('Request data:', JSON.stringify(formDataToSubmit, null, 2));
+        logger.info('Attempting backend submission...');
+        logger.formSubmission('Request data', formDataToSubmit);
 
         try {
             const controller = new AbortController();
@@ -264,17 +265,16 @@ const GetDealModal = ({ isOpen, onClose }) => {
 
             clearTimeout(timeoutId);
 
-            console.log('Response status:', response.status);
-            console.log('Response ok:', response.ok);
+            logger.apiResponse('Form submission', response);
 
             if (!response.ok) {
                 const errorText = await response.text();
-                console.error('Response error text:', errorText);
+                logger.error('Response error', { status: response.status, errorText });
                 throw new Error(`HTTP error! status: ${response.status} - ${errorText}`);
             }
 
             const result = await response.json();
-            console.log('Backend submission successful:', result);
+            logger.info('Backend submission successful', result);
 
             if (!result.success) {
                 throw new Error(result.error || 'Server returned error');
@@ -283,7 +283,7 @@ const GetDealModal = ({ isOpen, onClose }) => {
             return result;
 
         } catch (error) {
-            console.error('Backend submission failed:', error);
+            logger.error('Backend submission failed', error.message);
 
             if (error.name === 'AbortError') {
                 throw new Error('Request timed out. Please try again.');
@@ -314,16 +314,16 @@ const GetDealModal = ({ isOpen, onClose }) => {
                 if (!DEV_MODE && FORM_CONFIG.enableSheetsIntegration) {
 
                     const result = await submitToBackend(submissionData);
-                    console.log('Backend response:', result);
+                    logger.info('Backend response received', result);
 
                     setSubmitSuccess(true);
                     setCurrentStep(3); // Move to success step
                 } else {
                     // Development mode: just log and show success
-                    console.log('Form data (development mode):', submissionData);
-                    console.log('DEV_MODE:', DEV_MODE);
-                    console.log('FORM_ENDPOINT:', FORM_ENDPOINT);
-                    console.log('To enable backend integration, follow the setup guide in /google-apps-script/SETUP_GUIDE.md');
+                    logger.formSubmission('Development mode submission', submissionData);
+                    logger.config('DEV_MODE', DEV_MODE);
+                    logger.config('FORM_ENDPOINT', FORM_ENDPOINT);
+                    logger.info('To enable backend integration, follow the setup guide in /google-apps-script/SETUP_GUIDE.md');
 
                     setSubmitSuccess(true);
                     setCurrentStep(3); // Move to success step
@@ -332,7 +332,7 @@ const GetDealModal = ({ isOpen, onClose }) => {
                 // Don't auto-close modal - let user close it manually or via WhatsApp button
 
             } catch (error) {
-                console.error('Submission error:', error);
+                logger.error('Submission error', error.message);
                 setSubmitError(
                     error.message || ERROR_MESSAGES.generic
                 );

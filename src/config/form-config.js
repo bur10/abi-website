@@ -1,6 +1,8 @@
 // Form submission configuration
 // This file contains settings for the form submission backend
 
+import logger from '../utils/logger';
+
 // Environment detection
 export const DEV_MODE = import.meta.env.DEV || false;
 
@@ -51,7 +53,7 @@ export const SUCCESS_MESSAGES = {
 
 // Development mode settings
 if (DEV_MODE) {
-    console.log('Form configuration loaded in development mode');
-    console.log('FORM_ENDPOINT:', FORM_ENDPOINT);
-    console.log('To enable backend integration, follow the setup guide in /google-apps-script/SETUP_GUIDE.md');
+    logger.config('Form configuration loaded in development mode', true);
+    logger.config('FORM_ENDPOINT', FORM_ENDPOINT);
+    logger.info('To enable backend integration, follow the setup guide in /google-apps-script/SETUP_GUIDE.md');
 }

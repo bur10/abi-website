@@ -249,6 +249,8 @@ const BlogPostPage = () => {
                             </a>
                             <a
                                 href={`https://wa.me/${COMPANY_INFO.whatsapp}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200"
                             >
                                 WhatsApp ile İletişim
