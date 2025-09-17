@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main Pages -->
+  <url>
+    <loc>https://adenmanagement.com/</loc>
+    <lastmod>2025-09-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>https://adenmanagement.com/hizmet-bolgeleri</loc>
+    <lastmod>2025-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://adenmanagement.com/blog</loc>
+    <lastmod>2025-09-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Service Area Pages -->
+  <url>
+    <loc>https://adenmanagement.com/hizmet-bolgeleri/torbali-ve-cevreleri-hizmetler</loc>
+    <lastmod>2025-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://adenmanagement.com/hizmet-bolgeleri/izmir-merkez-hizmetler</loc>
+    <lastmod>2025-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://adenmanagement.com/hizmet-bolgeleri/ege-bolgesi-hizmetler</loc>
+    <lastmod>2025-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://adenmanagement.com/hizmet-bolgeleri/tatil-bolgeleri-hizmetler</loc>
+    <lastmod>2025-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Torbalı ve Çevreleri - Specific Service Pages -->
+  <url>
+    <loc>https://adenmanagement.com/hizmet-bolgeleri/torbali-ve-cevreleri-temizlik-hizmetleri</loc>
+    <lastmod>2025-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://adenmanagement.com/hizmet-bolgeleri/torbali-ve-cevreleri-site-ve-apartman-yonetimi</loc>
+    <lastmod>2025-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://adenmanagement.com/hizmet-bolgeleri/torbali-ve-cevreleri-personel-temini</loc>
+    <lastmod>2025-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://adenmanagement.com/hizmet-bolgeleri/torbali-ve-cevreleri-peyzaj-hizmetleri</loc>
+    <lastmod>2025-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://adenmanagement.com/hizmet-bolgeleri/torbali-ve-cevreleri-havuz-bakim-ve-temizligi</loc>
+    <lastmod>2025-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://adenmanagement.com/hizmet-bolgeleri/torbali-ve-cevreleri-acil-mudahale</loc>
+    <lastmod>2025-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- İzmir Merkez - Specific Service Pages -->
+  <url>
+    <loc>https://adenmanagement.com/hizmet-bolgeleri/izmir-merkez-site-ve-apartman-yonetimi</loc>
+    <lastmod>2025-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://adenmanagement.com/hizmet-bolgeleri/izmir-merkez-personel-temini</loc>
+    <lastmod>2025-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://adenmanagement.com/hizmet-bolgeleri/izmir-merkez-peyzaj-hizmetleri</loc>
+    <lastmod>2025-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://adenmanagement.com/hizmet-bolgeleri/izmir-merkez-guvenlik-hizmetleri</loc>
+    <lastmod>2025-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Ege Bölgesi - Specific Service Pages -->
+  <url>
+    <loc>https://adenmanagement.com/hizmet-bolgeleri/ege-bolgesi-personel-temini</loc>
+    <lastmod>2025-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Tatil Bölgeleri - Specific Service Pages -->
+  <url>
+    <loc>https://adenmanagement.com/hizmet-bolgeleri/tatil-bolgeleri-tatil-koyu-yonetimi</loc>
+    <lastmod>2025-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://adenmanagement.com/hizmet-bolgeleri/tatil-bolgeleri-otel-temizlik-hizmetleri</loc>
+    <lastmod>2025-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://adenmanagement.com/hizmet-bolgeleri/tatil-bolgeleri-sezonluk-personel</loc>
+    <lastmod>2025-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://adenmanagement.com/hizmet-bolgeleri/tatil-bolgeleri-peyzaj-bakimi</loc>
+    <lastmod>2025-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Blog Posts (sorted by date, newest first) -->
+  <url>
+    <loc>https://adenmanagement.com/blog/insaat-sonrasi-temizlik-izmir-torbalida-profesyonel-hizmet</loc>
+    <lastmod>2025-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://adenmanagement.com/blog/personel-temin-hizmetleri-izmir-torbalida-kalifiye-ekip</loc>
+    <lastmod>2025-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://adenmanagement.com/blog/izmir-site-apartman-yonetimi-hizmetleri-rehberi</loc>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://adenmanagement.com/blog/torbalida-profesyonel-temizlik-hizmetleri-neden-gerekli</loc>
+    <lastmod>2025-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+</urlset>
