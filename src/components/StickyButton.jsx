@@ -4,7 +4,7 @@ import React from 'react';
 const StickyButton = ({ openModal, isModalOpen }) => {
     return (
         <div className="fixed bottom-4 right-4 flex flex-col space-y-3" style={{ zIndex: 1000 }}>
-            {/* Get a Deal Now Button */}
+            {/* Get a Deal Now Button
             <button
                 onClick={openModal}
                 disabled={isModalOpen}
@@ -15,7 +15,7 @@ const StickyButton = ({ openModal, isModalOpen }) => {
             >
                 <i className="fas fa-broom mr-2"></i>
                 <span className="hidden md:block">Temizlik Hizmeti Al!</span>
-            </button>
+            </button> */}
 
             {/* WhatsApp Button */}
             <a

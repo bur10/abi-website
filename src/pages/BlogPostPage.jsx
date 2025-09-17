@@ -59,7 +59,7 @@ const BlogPostPage = () => {
                 <meta property="og:title" content={post.seoTitle} />
                 <meta property="og:description" content={post.seoDescription} />
                 <meta property="og:type" content="article" />
-                <meta property="og:url" content={`${window.location.origin}/blog/${post.slug}`} />
+                <meta property="og:url" content={`https://www.adenmanagement.com/blog/${post.slug}`} />
                 <meta property="og:image" content={`${window.location.origin}${post.featuredImage}`} />
                 <meta property="article:author" content={post.author} />
                 <meta property="article:published_time" content={post.publishDate} />
@@ -67,7 +67,7 @@ const BlogPostPage = () => {
                 {post.tags.map((tag, index) => (
                     <meta key={index} property="article:tag" content={tag} />
                 ))}
-                <link rel="canonical" href={`${window.location.origin}/blog/${post.slug}`} />
+                <link rel="canonical" href={`https://www.adenmanagement.com/blog/${post.slug}`} />
 
                 {/* JSON-LD Structured Data */}
                 <script type="application/ld+json">
@@ -76,26 +76,26 @@ const BlogPostPage = () => {
                         "@type": "BlogPosting",
                         "headline": post.title,
                         "description": post.excerpt,
-                        "image": `${window.location.origin}${post.featuredImage}`,
+                        "image": `https://www.adenmanagement.com${post.featuredImage}`,
                         "author": {
                             "@type": "Organization",
                             "name": post.author,
-                            "url": window.location.origin
+                            "url": "https://www.adenmanagement.com"
                         },
                         "publisher": {
                             "@type": "Organization",
                             "name": COMPANY_INFO.name,
-                            "url": window.location.origin,
+                            "url": "https://www.adenmanagement.com",
                             "logo": {
                                 "@type": "ImageObject",
-                                "url": `${window.location.origin}/images/aden-logo.png`
+                                "url": "https://www.adenmanagement.com/images/aden-logo.png"
                             }
                         },
                         "datePublished": post.publishDate,
                         "dateModified": post.publishDate,
                         "mainEntityOfPage": {
                             "@type": "WebPage",
-                            "@id": `${window.location.origin}/blog/${post.slug}`
+                            "@id": `https://www.adenmanagement.com/blog/${post.slug}`
                         },
                         "keywords": post.tags.join(", "),
                         "articleSection": post.category,

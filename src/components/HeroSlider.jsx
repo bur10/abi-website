@@ -68,7 +68,11 @@ export const HeroSlider = () => {
     };
 
     return (
-        <div className={`relative w-full ${isScrolled ? 'h-[calc(100vh-64px)]' : 'h-[calc(100vh-80px)]'} transition-all duration-300`}>
+        <div
+            className={`relative w-full transition-all duration-300 
+            h-[55vh] md:h-[65vh] 
+            ${isScrolled ? 'lg:h-[calc(100vh-64px)]' : 'lg:h-[calc(100vh-80px)]'}`}
+        >
             {/* Slides */}
             <div className="relative h-full overflow-hidden">
                 {slides.map((slide, index) => (

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, Facebook, Twitter, Instagram, Clock } from 'lucide-react';
+import { Phone, Instagram } from 'lucide-react';
 
 const Subheader = ({ openModal }) => {
 
@@ -15,29 +15,10 @@ const Subheader = ({ openModal }) => {
                                     +90 (532) 459 00 96
                                 </a>
                             </div>
-                            <div className="hidden sm:flex items-center">
-                                <button
-                                    onClick={openModal}
-                                    className="text-gray-100 hover:text-white px-3 py-1 font-medium transition-colors duration-200 flex items-center"
-                                >
-                                    <i className="fas fa-broom mr-1.5 text-xs"></i>
-                                    Temizlik Talebi
-                                </button>
-                            </div>
                         </div>
 
                         {/* Right side - Social Links and Mobile Button */}
                         <div className="flex items-center space-x-4">
-                            {/* Mobile Teklif Al Button */}
-                            <div className="sm:hidden">
-                                <button
-                                    onClick={openModal}
-                                    className="text-gray-100 hover:text-white px-3 py-1 font-medium transition-colors duration-200 flex items-center text-xs"
-                                >
-                                    <i className="fas fa-broom mr-1 text-xs"></i>
-                                    Temizlik Talebi
-                                </button>
-                            </div>
 
                             <a
                                 href="https://instagram.com/adengruptr"

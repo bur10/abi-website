@@ -48,7 +48,7 @@ export const Navbar = ({ openModal }) => {
     return (
         <nav className={`fixed top-0 left-0 right-0 bg-white shadow-lg z-50 transition-all duration-300`}>
             <Subheader openModal={openModal} />
-            <div className="max-w-7xl mx-auto px-4">
+            <div className="max-w-7xl mx-auto px-6 md:px-8">
                 <div className={`relative flex items-center transition-all duration-300 ${isScrolled ? 'h-20' : 'h-32'}`}>
                     {/* Logo - Left on desktop, centered on mobile/tablet */}
                     <div className="flex items-center justify-center lg:justify-start w-full lg:w-auto lg:ml-8">
@@ -63,8 +63,8 @@ export const Navbar = ({ openModal }) => {
                         </div>
                     </div>
 
-                    {/* Desktop Navigation - Right */}
-                    <div className="hidden lg:flex items-center ml-auto space-x-1">
+                    {/* Desktop Navigation - Center */}
+                    <div className="hidden lg:flex flex-1 items-center justify-center space-x-3">
                         {location.pathname === '/' ? (
                             <button
                                 onClick={() => scrollToSection('services')}
@@ -83,14 +83,14 @@ export const Navbar = ({ openModal }) => {
 
                         <Link
                             to="/hizmet-bolgeleri"
-                            className={`text-gray-600 hover:text-gray-900 px-3 py-2 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-base'} ${location.pathname.startsWith('/hizmet-bolgeleri') ? 'text-blue-600 font-medium' : ''}`}
+                            className={`text-gray-600 hover:text-gray-900 px-3 py-2 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-base'} ${location.pathname.startsWith('/hizmet-bolgeleri')}`}
                         >
                             Hizmet Bölgeleri
                         </Link>
 
                         <Link
                             to="/blog"
-                            className={`text-gray-600 hover:text-gray-900 px-3 py-2 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-base'} ${location.pathname.startsWith('/blog') ? 'text-blue-600 font-medium' : ''}`}
+                            className={`text-gray-600 hover:text-gray-900 px-3 py-2 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-base'} ${location.pathname.startsWith('/blog')}`}
                         >
                             Blog
                         </Link>
@@ -144,8 +144,30 @@ export const Navbar = ({ openModal }) => {
                         )}
                     </div>
 
-                    {/* Mobile Menu Button - Absolute positioned on right */}
-                    <div className="absolute right-0 top-1/2 transform -translate-y-1/2 lg:hidden">
+                    {/* Desktop CTA - Right */}
+                    <div className="hidden lg:flex ml-auto pr-4 h-full">
+                        <div className="flex items-center justify-center h-full">
+                            <button
+                                onClick={openModal}
+                                className={`rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-all duration-300 ${isScrolled ? 'px-4 py-1.5 text-sm' : 'px-5 py-2 text-base'}`}
+                            >
+                                Teklif Al
+                            </button>
+                        </div>
+                    </div>
+
+                    {/* Mobile CTA - Left */}
+                    <div className="absolute left-0 top-1/2 -translate-y-1/2 lg:hidden flex items-center pl-2">
+                        <button
+                            onClick={openModal}
+                            className={`rounded-md bg-blue-600 text-white hover:bg-blue-700 transition-all duration-300 ${isScrolled ? 'px-2.5 py-1 text-xs' : 'px-3 py-1.5 text-sm'}`}
+                        >
+                            Teklif Al
+                        </button>
+                    </div>
+
+                    {/* Mobile Menu Button - Right */}
+                    <div className="absolute right-0 top-1/2 -translate-y-1/2 lg:hidden">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
                             className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
@@ -253,6 +275,8 @@ export const Navbar = ({ openModal }) => {
                                 İletişim
                             </button>
                         )}
+
+
                     </div>
                 </div>
             </div>

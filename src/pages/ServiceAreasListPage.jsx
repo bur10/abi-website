@@ -14,7 +14,20 @@ const ServiceAreasListPage = () => {
             <Helmet>
                 <title>Hizmet Bölgeleri | Aden Grup</title>
                 <meta name="description" content="Ege bölgesinde hizmet verdiğimiz bölgelerin listesi. Torbalı, İzmir merkez ve diğer bölgelerde sunduğumuz hizmetleri keşfedin." />
+                <meta name="keywords" content="hizmet bölgeleri, torbalı hizmet, izmir hizmet, ege bölgesi hizmet, aden grup bölgeleri" />
+                <meta name="robots" content="index, follow" />
                 <link rel="canonical" href="https://www.adenmanagement.com/hizmet-bolgeleri" />
+
+                {/* Open Graph */}
+                <meta property="og:title" content="Hizmet Bölgeleri | Aden Grup" />
+                <meta property="og:description" content="Ege bölgesinde hizmet verdiğimiz bölgelerin listesi. Torbalı, İzmir merkez ve diğer bölgelerde sunduğumuz hizmetleri keşfedin." />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://www.adenmanagement.com/hizmet-bolgeleri" />
+
+                {/* Twitter */}
+                <meta name="twitter:card" content="summary" />
+                <meta name="twitter:title" content="Hizmet Bölgeleri | Aden Grup" />
+                <meta name="twitter:description" content="Ege bölgesinde hizmet verdiğimiz bölgelerin listesi. Torbalı, İzmir merkez ve diğer bölgelerde sunduğumuz hizmetleri keşfedin." />
             </Helmet>
             <section className="py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

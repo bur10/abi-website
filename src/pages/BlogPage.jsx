@@ -61,8 +61,8 @@ const BlogPage = () => {
                 <meta property="og:title" content={BLOG_SEO_META.title} />
                 <meta property="og:description" content={BLOG_SEO_META.description} />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content={`${window.location.origin}/blog`} />
-                <link rel="canonical" href={`${window.location.origin}/blog`} />
+                <meta property="og:url" content="https://www.adenmanagement.com/blog" />
+                <link rel="canonical" href="https://www.adenmanagement.com/blog" />
             </Helmet>
 
             <div className="min-h-screen bg-gray-50 pt-32">
